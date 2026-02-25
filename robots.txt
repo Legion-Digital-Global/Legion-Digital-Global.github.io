@@ -1,0 +1,15 @@
+﻿User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://Legion(https://Legion)-Digital-Global.github.io/sitemap.xml
+
+# Block common bot crawlers that waste bandwidth
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /

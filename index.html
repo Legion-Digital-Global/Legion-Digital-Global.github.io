@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ SEO GLOBAL ═══ -->
+<title>Legión Digital — Digital Privacy & Security Services</title>
+<meta name="description" content="Expert digital privacy, cybersecurity and technology services. Remote sessions. Results in 24h. Serving USA, Europe, Asia, Australia, Latin America.">
+<meta name="keywords" content="digital privacy, cybersecurity, iPhone privacy, Android security, VPN setup, PayPal USA, digital security services, privacidad digital, seguridad digital, ciberseguridad">
+<meta name="author" content="Legión Digital">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://legiondigital.github.io/">
+
+<!-- Hreflang for international SEO -->
+<link rel="alternate" hreflang="es" href="https://legiondigital.github.io/?lang=es">
+<link rel="alternate" hreflang="en" href="https://legiondigital.github.io/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://legiondigital.github.io/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Legión Digital — Your Digital Shield Worldwide">
+<meta property="og:description" content="Expert digital privacy and cybersecurity services. Remote sessions. 24h response. Serving USA, Europe, Asia, Australia.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://legiondigital.github.io/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Legión Digital — Digital Privacy & Security">
+<meta name="twitter:description" content="Expert digital privacy services. Remote sessions. 24h response worldwide.">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Legión Digital",
+  "description": "Digital privacy, cybersecurity and technology consulting services",
+  "url": "https://legiondigital.github.io/",
+  "telephone": "+15722081823",
+  "email": "soporte.upon273@passinbox.com",
+  "sameAs": [
+    "https://t.me/Legi0n_St0re",
+    "https://wa.me/15722081823"
+  ],
+  "areaServed": ["US","ES","GB","MX","AU","DE","FR","IT","CA","JP"],
+  "serviceType": ["Digital Privacy", "Cybersecurity", "VPN Setup", "Digital Financial Services"],
+  "priceRange": "$10 - $50"
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════════
+   LEGIÓN DIGITAL — GLOBAL EDITION
+   Bilingual ES/EN · Accessible · Mobile-First
+   Military-Luxury Cyberpunk · Gold on Black.
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  --gold: #c9a227;
+  --gold2: #f0d060;
+  --gold3: #8a6c10;
+  --gold-faint: rgba(201,162,39,0.07);
+  --bg: #020205;
+  --bg2: #05050c;
+  --bg3: #09091a;
+  --bg4: #0d0d20;
+  --border: rgba(201,162,39,0.18);
+  --border2: rgba(201,162,39,0.06);
+  --text: #dde0f0;
+  --muted: #3a3a5a;
+  --muted2: #6a6a8a;
+  --green: #00e87a;
+  --red: #ff2d55;
+  --cyan: #00cfff;
+  --wa: #25D366;
+  --base-font-size: 16px; /* accessibility: overridden by JS */
+}
+
+/* ── ACCESSIBILITY FONT SCALE ── */
+html { font-size: var(--base-font-size); scroll-behavior: smooth; }
+html.text-lg { font-size: 19px; }
+html.text-xl { font-size: 22px; }
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Rajdhani', sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Scanline */
+body::before {
+  content:'';position:fixed;inset:0;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(201,162,39,0.010) 2px,rgba(201,162,39,0.010) 3px);
+  pointer-events:none;z-index:9990;
+}
+
+/* Custom cursor */
+.cursor-dot { position:fixed;width:6px;height:6px;background:var(--gold2);border-radius:50%;pointer-events:none;z-index:9999;transition:transform 0.1s;mix-blend-mode:difference; }
+.cursor-ring { position:fixed;width:32px;height:32px;border:1px solid rgba(201,162,39,0.5);border-radius:50%;pointer-events:none;z-index:9998;transition:all 0.12s ease; }
+@media(max-width:768px){.cursor-dot,.cursor-ring{display:none;}}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:3px;} ::-webkit-scrollbar-track{background:var(--bg);} ::-webkit-scrollbar-thumb{background:var(--gold3);}
+
+/* Progress bar */
+.progress-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));z-index:9999;transition:width 0.1s;}
+
+/* ─── ACCESSIBILITY PANEL ─── */
+.a11y-bar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.a11y-btn {
+  background: rgba(5,5,12,0.92);
+  border: 1px solid var(--border);
+  border-right: none;
+  color: var(--gold);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 10px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  line-height: 1;
+  width: 38px;
+  text-align: center;
+}
+.a11y-btn:hover { background: var(--gold-faint); border-color: var(--gold); }
+.a11y-btn.active { background: var(--gold); color: #000; }
+@media(max-width:480px){ .a11y-bar { top:auto; bottom:90px; right:0; transform:none; } }
+
+/* ─── LANG TOGGLE ─── */
+.lang-toggle {
+  position: fixed;
+  top: 70px;
+  right: 16px;
+  z-index: 550;
+  display: flex;
+  gap: 3px;
+  background: rgba(2,2,5,0.9);
+  border: 1px solid var(--border);
+  padding: 4px;
+}
+.lang-btn {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+  padding: 6px 10px;
+  border: none;
+  background: transparent;
+  color: var(--muted2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.lang-btn.active { background: var(--gold); color: #000; font-weight: 700; }
+.lang-btn:hover:not(.active) { color: var(--gold); }
+
+/* ─── CONTAINER ─── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+@media(max-width:768px){ .container{ padding:0 18px; } }
+
+/* ─── REUSABLES ─── */
+.gold-text { background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+.fade-up { opacity:0;transform:translateY(24px);transition:opacity 0.65s ease,transform 0.65s ease; }
+.fade-up.in { opacity:1;transform:translateY(0); }
+.section-tag { font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:6px;color:rgba(201,162,39,0.5);display:flex;align-items:center;gap:12px;margin-bottom:14px; }
+.section-tag::after { content:'';flex:1;max-width:80px;height:1px;background:rgba(201,162,39,0.25); }
+.section-h { font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5.5vw,72px);line-height:0.88;letter-spacing:2px;margin-bottom:18px; }
+.section { padding:96px 0; }
+.section-alt { background:var(--bg2); }
+.gold-div { height:1px;background:linear-gradient(90deg,transparent,rgba(201,162,39,0.25),transparent); }
+
+/* ─── NAV ─── */
+.nav { position:fixed;top:0;left:0;right:0;z-index:500;padding:14px 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(2,2,5,0.94);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);transition:border-color 0.3s; }
+.nav.scrolled { border-color:var(--border); }
+.nav-logo { font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:6px;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:logoShimmer 4s linear infinite;text-decoration:none; }
+@keyframes logoShimmer { 0%{background-position:0%}100%{background-position:200%} }
+.nav-links { display:flex;gap:28px;align-items:center;list-style:none; }
+.nav-links a { font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:3px;color:var(--muted2);text-decoration:none;transition:color 0.2s; }
+.nav-links a:hover { color:var(--gold); }
+.nav-cta { font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:3px;padding:9px 22px;background:var(--gold-faint);border:1px solid var(--border);color:var(--gold);text-decoration:none;transition:all 0.2s; }
+.nav-cta:hover { background:rgba(201,162,39,0.14); }
+.nav-menu-btn { display:none;background:none;border:1px solid var(--border);color:var(--gold);font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:2px;padding:8px 14px;cursor:pointer; }
+@media(max-width:900px){ .nav{padding:12px 18px;} .nav-links{display:none;} .nav-menu-btn{display:block;} }
+
+/* ─── MOBILE MENU ─── */
+.mobile-menu { display:none;position:fixed;inset:0;background:rgba(2,2,5,0.98);z-index:490;flex-direction:column;align-items:center;justify-content:center;gap:28px; }
+.mobile-menu.open { display:flex; }
+.mobile-menu a { font-family:'Bebas Neue',sans-serif;font-size:44px;letter-spacing:4px;color:var(--text);text-decoration:none;transition:color 0.2s; }
+.mobile-menu a:hover { color:var(--gold); }
+.mobile-close { position:absolute;top:16px;right:20px;background:none;border:1px solid var(--border);color:var(--gold);font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:2px;padding:8px 14px;cursor:pointer; }
+
+/* ─── HERO ─── */
+.hero { min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:130px 48px 80px;position:relative;overflow:hidden; }
+.hero-grid { position:absolute;inset:0;background-image:linear-gradient(rgba(201,162,39,0.032) 1px,transparent 1px),linear-gradient(90deg,rgba(201,162,39,0.032) 1px,transparent 1px);background-size:64px 64px;animation:gridBreath 10s ease-in-out infinite; }
+@keyframes gridBreath { 0%,100%{opacity:0.4}50%{opacity:1} }
+.orb { position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px); }
+.orb-1 { width:700px;height:700px;background:radial-gradient(circle,rgba(201,162,39,0.06),transparent 65%);top:-200px;right:-150px;animation:orbDrift 14s ease-in-out infinite; }
+.orb-2 { width:500px;height:500px;background:radial-gradient(circle,rgba(0,207,255,0.04),transparent 65%);bottom:-100px;left:-100px;animation:orbDrift 18s ease-in-out infinite reverse; }
+@keyframes orbDrift { 0%,100%{transform:translate(0,0)}33%{transform:translate(-20px,30px)}66%{transform:translate(30px,-20px)} }
+.hero-inner { position:relative;z-index:2; }
+
+/* GLOBAL BADGE */
+.global-badge {
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(0,207,255,0.05);border:1px solid rgba(0,207,255,0.2);
+  padding:6px 14px;margin-bottom:16px;
+  font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:3px;color:var(--cyan);
+}
+.globe-anim { animation: spin 8s linear infinite; display:inline-block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.hero-eyebrow { font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:8px;color:rgba(201,162,39,0.55);display:flex;align-items:center;gap:16px;margin-bottom:22px;opacity:0;animation:fadeInUp 0.8s 0.1s forwards; }
+.eyebrow-line { width:36px;height:1px;background:rgba(201,162,39,0.35);flex-shrink:0; }
+.hero-h1 { font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,9vw,140px);line-height:0.84;letter-spacing:3px;margin-bottom:28px;opacity:0;animation:fadeInUp 0.9s 0.25s forwards; }
+.h1-line1 { display:block;color:#fff; }
+.h1-line2 { display:block;background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+.h1-line3 { display:block;-webkit-text-stroke:1px rgba(201,162,39,0.28);color:transparent; }
+.hero-sub { font-size:clamp(14px,2vw,17px);color:var(--muted2);max-width:520px;line-height:1.82;margin-bottom:40px;opacity:0;animation:fadeInUp 0.9s 0.4s forwards; }
+.hero-sub strong { color:var(--text);font-weight:600; }
+.hero-ctas { display:flex;gap:12px;flex-wrap:wrap;margin-bottom:50px;opacity:0;animation:fadeInUp 0.9s 0.55s forwards; }
+
+/* ─── MARKET FLAGS ─── */
+.market-flags { display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;opacity:0;animation:fadeInUp 0.9s 0.65s forwards; }
+.mf { font-family:'Orbitron',sans-serif;font-size:6.5px;letter-spacing:2px;padding:4px 10px;border:1px solid var(--border2);color:var(--muted2);background:var(--gold-faint);display:flex;align-items:center;gap:5px; }
+.mf-flag { font-size:12px; }
+
+.btn-primary { font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:4px;padding:16px 36px;background:var(--gold);color:#000;font-weight:700;text-decoration:none;position:relative;overflow:hidden;display:inline-block;transition:all 0.25s; }
+.btn-primary::after { content:'';position:absolute;inset:0;background:var(--gold2);transform:translateX(-100%);transition:transform 0.3s; }
+.btn-primary:hover::after { transform:translateX(0); }
+.btn-primary span { position:relative;z-index:1; }
+.btn-primary:hover { transform:translateY(-2px); }
+.btn-secondary { font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:4px;padding:16px 36px;background:transparent;border:1px solid var(--border);color:var(--gold);text-decoration:none;transition:all 0.25s; }
+.btn-secondary:hover { background:var(--gold-faint);border-color:var(--gold); }
+.btn-wa { background:var(--wa);color:#000;font-weight:700; }
+.btn-wa:hover::after { background:rgba(37,211,102,0.8); }
+
+.hero-stats { display:inline-flex;border:1px solid var(--border2);opacity:0;animation:fadeInUp 0.9s 0.7s forwards; }
+.stat-box { padding:18px 28px;border-right:1px solid var(--border2);position:relative; }
+.stat-box:last-child { border-right:none; }
+.stat-box::after { content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform 0.4s; }
+.stat-box:hover::after { transform:scaleX(1); }
+.stat-val { font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold);line-height:1; }
+.stat-lbl { font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;color:var(--muted);margin-top:3px; }
+@keyframes fadeInUp { from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)} }
+
+/* ─── MARQUEE ─── */
+.marquee-strip { border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);background:var(--bg2);overflow:hidden;padding:11px 0; }
+.marquee-track { display:flex;animation:marquee 30s linear infinite;white-space:nowrap; }
+.marquee-track:hover { animation-play-state:paused; }
+.marquee-item { font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:4px;color:var(--muted);padding:0 36px;display:flex;align-items:center;gap:14px;flex-shrink:0; }
+.marquee-dot { width:3px;height:3px;background:var(--gold);border-radius:50%;flex-shrink:0; }
+@keyframes marquee { 0%{transform:translateX(0)}100%{transform:translateX(-50%)} }
+
+/* ─── SERVICES ─── */
+.services-intro { display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:56px; }
+.services-intro-right { padding-top:52px;font-size:15px;color:var(--muted2);line-height:1.8; }
+.services-intro-right p+p { margin-top:14px; }
+.services-intro-right strong { color:var(--text); }
+@media(max-width:900px){ .services-intro{grid-template-columns:1fr;gap:24px;} }
+.services-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border2); }
+@media(max-width:900px){ .services-grid{grid-template-columns:1fr;gap:12px;background:transparent;} }
+.service-card { background:var(--bg2);padding:36px 28px;position:relative;overflow:hidden;transition:background 0.25s; }
+.service-card::before { content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform 0.5s; }
+.service-card:hover { background:var(--bg3); }
+.service-card:hover::before { transform:scaleX(1); }
+.service-card-num { font-family:'Bebas Neue',sans-serif;font-size:52px;color:rgba(201,162,39,0.08);line-height:1;margin-bottom:14px; }
+.service-icon { font-size:28px;margin-bottom:16px;display:block; }
+.service-tag { font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:4px;color:rgba(201,162,39,0.6);margin-bottom:8px; }
+.service-name { font-family:'Bebas Neue',sans-serif;font-size:28px;color:#fff;letter-spacing:1px;line-height:0.95;margin-bottom:14px; }
+.service-desc { font-size:13px;color:var(--muted2);line-height:1.72;margin-bottom:22px; }
+.service-features { display:flex;flex-direction:column;gap:6px;margin-bottom:22px; }
+.sf { font-size:12px;color:var(--muted2);display:flex;gap:8px;align-items:flex-start; }
+.sf::before { content:'→';color:var(--gold);flex-shrink:0; }
+.service-price { font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:3px;color:var(--gold);padding:7px 14px;background:var(--gold-faint);border:1px solid var(--border2);display:inline-block;margin-bottom:14px; }
+.service-ctas { display:flex;flex-direction:column;gap:8px; }
+.service-cta { font-family:'Orbitron',sans-serif;font-size:7.5px;letter-spacing:2px;color:var(--muted);text-decoration:none;transition:color 0.2s;border-top:1px solid var(--border2);padding-top:12px;display:flex;align-items:center;gap:6px; }
+.service-cta:hover { color:var(--gold); }
+.service-cta+.service-cta { border-top:none;padding-top:0; }
+
+/* ─── ABOUT ─── */
+.about-grid { display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center; }
+@media(max-width:900px){ .about-grid{grid-template-columns:1fr;gap:40px;} }
+.trust-items { display:flex;flex-direction:column;gap:12px;margin-top:32px; }
+.trust-item { display:flex;gap:16px;padding:18px 20px;background:var(--bg3);border:1px solid var(--border2);border-left:2px solid var(--gold);transition:all 0.2s; }
+.trust-item:hover { background:var(--bg4); }
+.ti-icon { font-size:22px;flex-shrink:0; }
+.ti-title { font-size:15px;font-weight:700;color:#ddd;margin-bottom:4px; }
+.ti-desc { font-size:12px;color:var(--muted2);line-height:1.6; }
+.shield-wrap { display:flex;align-items:center;justify-content:center;position:relative;height:360px; }
+.pulse-ring { position:absolute;border-radius:50%;border:1px solid rgba(201,162,39,0.15);animation:pulseOut 3s ease-out infinite; }
+.pulse-ring:nth-child(1){width:200px;height:200px;} .pulse-ring:nth-child(2){width:280px;height:280px;animation-delay:0.5s;} .pulse-ring:nth-child(3){width:360px;height:360px;animation-delay:1s;}
+@keyframes pulseOut { 0%{opacity:0.8;transform:scale(0.92)}100%{opacity:0;transform:scale(1.06)} }
+.shield-core { position:absolute;width:160px;height:160px;background:radial-gradient(circle,rgba(201,162,39,0.1),rgba(201,162,39,0.03));border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center; }
+.shield-emoji { font-size:64px;animation:shieldGlow 3s ease-in-out infinite;filter:drop-shadow(0 0 20px rgba(201,162,39,0.4)); }
+@keyframes shieldGlow { 0%,100%{filter:drop-shadow(0 0 20px rgba(201,162,39,0.3))}50%{filter:drop-shadow(0 0 50px rgba(201,162,39,0.7))} }
+
+/* ─── MARKETS SECTION ─── */
+.markets-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border2); }
+@media(max-width:900px){ .markets-grid{grid-template-columns:repeat(2,1fr);} }
+@media(max-width:480px){ .markets-grid{grid-template-columns:1fr;gap:8px;background:transparent;} }
+.market-card { background:var(--bg3);padding:28px 22px;text-align:center;transition:background 0.2s;position:relative;overflow:hidden; }
+.market-card:hover { background:var(--bg4); }
+.market-card::after { content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform 0.4s; }
+.market-card:hover::after { transform:scaleX(1); }
+.mc-flag { font-size:36px;margin-bottom:10px;display:block; }
+.mc-region { font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:3px;color:var(--gold);margin-bottom:6px; }
+.mc-desc { font-size:11.5px;color:var(--muted2);line-height:1.6; }
+
+/* ─── SERIES ─── */
+.eps-week { display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--border2);margin-bottom:48px; }
+@media(max-width:768px){ .eps-week{grid-template-columns:repeat(3,1fr);gap:4px;background:transparent;} }
+.ep-box { background:var(--bg3);padding:22px 12px;text-align:center;transition:background 0.2s; }
+.ep-box:hover { background:var(--bg4); }
+.ep-day { font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;color:var(--muted);margin-bottom:8px; }
+.ep-num { font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold);line-height:1;margin-bottom:6px; }
+.ep-title { font-size:10px;color:var(--muted2);line-height:1.4; }
+.platforms-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border2); }
+@media(max-width:768px){ .platforms-grid{grid-template-columns:1fr;gap:10px;background:transparent;} }
+.plat-box { background:var(--bg3);padding:30px 26px;transition:background 0.2s; }
+.plat-box:hover { background:var(--bg4); }
+.plat-name { font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:4px;margin-bottom:10px; }
+.plat-tg{color:var(--cyan);} .plat-fb{color:#6090ff;} .plat-reel{color:var(--red);}
+.plat-title { font-size:18px;font-weight:700;color:#fff;margin-bottom:8px; }
+.plat-desc { font-size:12.5px;color:var(--muted2);line-height:1.65;margin-bottom:18px; }
+.plat-link { font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:3px;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,162,39,0.3);padding-bottom:2px;transition:border-color 0.2s; }
+.plat-link:hover { border-color:var(--gold); }
+
+/* ─── PRICING ─── */
+.pricing-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:12px; }
+@media(max-width:900px){ .pricing-grid{grid-template-columns:1fr;gap:14px;} }
+.price-card { background:var(--bg3);border:1px solid var(--border2);padding:32px 28px;position:relative;overflow:hidden;transition:border-color 0.25s; }
+.price-card:hover { border-color:var(--border); }
+.price-card.featured { border-color:var(--border);background:var(--bg4); }
+.price-card.featured::before { content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2)); }
+.price-badge { font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:3px;padding:4px 10px;background:var(--gold-faint);border:1px solid var(--border2);color:var(--gold);display:inline-block;margin-bottom:20px; }
+.price-badge.hot{color:var(--red);border-color:rgba(255,45,85,.2);background:rgba(255,45,85,.04);}
+.price-tier { font-family:'Bebas Neue',sans-serif;font-size:32px;color:#fff;letter-spacing:1px;margin-bottom:8px; }
+.price-amount { font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;margin-bottom:4px; }
+.pa-from{font-size:14px;color:var(--muted2);font-family:'Rajdhani',sans-serif;} .pa-curr{color:var(--gold);} .pa-unit{font-size:16px;color:var(--muted2);font-family:'Rajdhani',sans-serif;}
+.price-desc{font-size:13px;color:var(--muted2);line-height:1.65;margin:16px 0;}
+.price-features{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;}
+.pf{font-size:12.5px;color:var(--muted2);display:flex;gap:9px;align-items:flex-start;}
+.pf .check{color:var(--green);flex-shrink:0;font-weight:700;}
+.price-btns { display:flex;flex-direction:column;gap:6px; }
+.price-btn { display:block;font-family:'Orbitron',sans-serif;font-size:8px;letter-spacing:3px;padding:11px;text-align:center;text-decoration:none;transition:all 0.25s; }
+.pb-secondary{border:1px solid var(--border);color:var(--gold);}
+.pb-secondary:hover{background:var(--gold-faint);}
+.pb-primary{background:var(--gold);color:#000;font-weight:700;}
+.pb-primary:hover{background:var(--gold2);}
+.pb-wa{background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.3);color:var(--wa);}
+.pb-wa:hover{background:rgba(37,211,102,0.25);}
+
+/* ─── CONTACT ─── */
+.contact-grid { display:grid;grid-template-columns:1fr 1fr;gap:48px; }
+@media(max-width:900px){ .contact-grid{grid-template-columns:1fr;gap:32px;} }
+.contact-info { display:flex;flex-direction:column;gap:0; }
+.ci { display:flex;gap:16px;padding:18px 20px;border:1px solid var(--border2);border-bottom:none;transition:background 0.2s;align-items:flex-start; }
+.ci:last-of-type { border-bottom:1px solid var(--border2);margin-bottom:20px; }
+.ci:hover { background:var(--bg3); }
+.ci-icon { font-size:20px;flex-shrink:0; }
+.ci-label { font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:3px;color:var(--muted);margin-bottom:5px; }
+.ci-val { font-size:15px;color:#ddd;font-weight:600; }
+.ci-val a { color:var(--gold);text-decoration:none; }
+.ci-val a:hover { text-decoration:underline; }
+.ci-wa a { color:var(--wa); }
+
+.free-consult { padding:20px;background:var(--gold-faint);border:1px solid var(--border);border-left:3px solid var(--gold); }
+.fc-tag { font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:3px;color:var(--gold);margin-bottom:8px; }
+.fc-text { font-size:13px;color:var(--muted2);line-height:1.65; }
+.fc-text strong { color:var(--text); }
+
+/* Contact Form */
+.contact-form { background:var(--bg3);border:1px solid var(--border2);padding:36px; }
+@media(max-width:480px){ .contact-form{padding:22px;} }
+.cf-title { font-family:'Bebas Neue',sans-serif;font-size:30px;color:#fff;letter-spacing:1px;margin-bottom:8px; }
+.cf-sub { font-size:13px;color:var(--muted2);margin-bottom:28px;line-height:1.6; }
+.cf-group { margin-bottom:14px; }
+.cf-label { font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:3px;color:var(--muted);display:block;margin-bottom:6px; }
+.cf-input,.cf-select,.cf-textarea { width:100%;background:var(--bg2);border:1px solid var(--border2);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:14px;padding:12px 14px;outline:none;transition:border-color 0.2s; }
+.cf-input:focus,.cf-select:focus,.cf-textarea:focus { border-color:var(--gold); }
+.cf-select option { background:var(--bg2); }
+.cf-textarea { height:90px;resize:vertical; }
+.cf-actions { display:flex;flex-direction:column;gap:8px;margin-top:6px; }
+.cf-btn { width:100%;padding:14px;font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:4px;font-weight:700;border:none;cursor:pointer;transition:all 0.25s; }
+.cf-btn-tg { background:var(--gold);color:#000; }
+.cf-btn-tg:hover { background:var(--gold2); }
+.cf-btn-wa { background:var(--wa);color:#000; }
+.cf-btn-wa:hover { background:#20bd5a; }
+.cf-btn-email { background:transparent;border:1px solid var(--border);color:var(--gold); }
+.cf-btn-email:hover { background:var(--gold-faint); }
+.cf-note { font-size:11px;color:var(--muted);text-align:center;margin-top:8px; }
+
+/* ─── FOOTER ─── */
+footer { background:var(--bg2);border-top:1px solid var(--border2);padding:48px 48px 28px; }
+@media(max-width:768px){ footer{padding:32px 18px 24px;} }
+.footer-grid { max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px; }
+@media(max-width:900px){ .footer-grid{grid-template-columns:1fr 1fr;gap:32px;} }
+@media(max-width:480px){ .footer-grid{grid-template-columns:1fr;gap:24px;} }
+.footer-brand {}
+.footer-logo { font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:6px;color:var(--gold);display:block;margin-bottom:10px; }
+.footer-tagline { font-size:12px;color:var(--muted2);line-height:1.65;max-width:220px; }
+.footer-col-title { font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:4px;color:rgba(201,162,39,0.5);margin-bottom:14px; }
+.footer-links { display:flex;flex-direction:column;gap:9px; }
+.footer-links a { font-size:13px;color:var(--muted2);text-decoration:none;transition:color 0.2s; }
+.footer-links a:hover { color:var(--gold); }
+.footer-contact-links { display:flex;flex-direction:column;gap:9px; }
+.footer-contact-links a { font-size:12.5px;color:var(--muted2);text-decoration:none;transition:color 0.2s;display:flex;align-items:center;gap:6px; }
+.footer-contact-links a:hover { color:var(--gold); }
+.footer-bottom { border-top:1px solid var(--border2);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;max-width:1200px;margin:0 auto; }
+.footer-copy { font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:2px;color:var(--muted); }
+.footer-certifs { display:flex;gap:8px;flex-wrap:wrap; }
+.fc { font-family:'Orbitron',sans-serif;font-size:6px;letter-spacing:2px;padding:3px 8px;border:1px solid var(--border2);color:var(--muted2); }
+
+/* ─── FLOATING BUTTONS ─── */
+.float-stack { position:fixed;bottom:24px;right:24px;z-index:400;display:flex;flex-direction:column;gap:8px;align-items:flex-end; }
+.float-btn { font-family:'Orbitron',sans-serif;font-size:7.5px;letter-spacing:2px;padding:12px 18px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:7px;transition:all 0.2s;animation:floatCTA 0.8s 1s both; }
+.fb-tg { background:var(--gold);color:#000; }
+.fb-tg:hover { background:var(--gold2);transform:translateY(-2px); }
+.fb-wa { background:var(--wa);color:#000; }
+.fb-wa:hover { transform:translateY(-2px); }
+@keyframes floatCTA { from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)} }
+
+/* ─── MOBILE FIXES ─── */
+@media(max-width:768px){
+  html,body{overflow-x:hidden;width:100%;}
+  .hero{padding:110px 18px 70px;}
+  .orb{display:none;}
+  .hero-stats{display:grid!important;grid-template-columns:1fr 1fr;width:100%;border:none;}
+  .stat-box{border:1px solid var(--border2);padding:14px;}
+  .market-flags { gap:5px; }
+  .float-stack { right:14px;bottom:16px; }
+  .float-btn { padding:10px 14px;font-size:7px; }
+  .lang-toggle { top:55px;right:10px; }
+  .a11y-bar { top:auto;bottom:140px; }
+}
+
+/* ─── FOCUS ACCESSIBILITY ─── */
+:focus-visible { outline:2px solid var(--gold);outline-offset:2px; }
+a:focus-visible,button:focus-visible { outline:2px solid var(--gold2);outline-offset:3px; }
+
+/* hide lang strings */
+[data-lang] { display:none; }
+[data-lang].visible { display:revert; }
+.lang-hidden { display:none !important; }
+</style>
+</head>
+<body>
+
+<!-- ELEMENTS -->
+<div class="cursor-dot" id="dot"></div>
+<div class="cursor-ring" id="ring"></div>
+<div class="progress-bar" id="progress"></div>
+
+<!-- ACCESSIBILITY PANEL -->
+<aside class="a11y-bar" role="toolbar" aria-label="Accessibility options">
+  <button class="a11y-btn" id="a11y-normal" onclick="setFont('normal')" title="Normal text size" aria-pressed="true">A</button>
+  <button class="a11y-btn" id="a11y-lg" onclick="setFont('lg')" title="Large text" aria-pressed="false">A+</button>
+  <button class="a11y-btn" id="a11y-xl" onclick="setFont('xl')" title="Extra large text" aria-pressed="false">A++</button>
+</aside>
+
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-toggle" role="group" aria-label="Language selection">
+  <button class="lang-btn active" id="btn-es" onclick="setLang('es')" aria-pressed="true">ES</button>
+  <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-close" onclick="closeMobileMenu()" aria-label="Close menu">✕ <span data-es="CERRAR" data-en="CLOSE"></span></button>
+  <a href="#servicios" onclick="closeMobileMenu()"><span data-es="SERVICIOS" data-en="SERVICES"></span></a>
+  <a href="#precios" onclick="closeMobileMenu()"><span data-es="PRECIOS" data-en="PRICING"></span></a>
+  <a href="#mercados" onclick="closeMobileMenu()"><span data-es="MERCADOS" data-en="MARKETS"></span></a>
+  <a href="#sobre" onclick="closeMobileMenu()"><span data-es="NOSOTROS" data-en="ABOUT"></span></a>
+  <a href="#contacto" onclick="closeMobileMenu()"><span data-es="CONTACTO" data-en="CONTACT"></span></a>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="Legión Digital home">LEGIÓN DIGITAL</a>
+  <ul class="nav-links">
+    <li><a href="#servicios"><span data-es="Servicios" data-en="Services"></span></a></li>
+    <li><a href="#precios"><span data-es="Precios" data-en="Pricing"></span></a></li>
+    <li><a href="#mercados"><span data-es="Mercados" data-en="Markets"></span></a></li>
+    <li><a href="#sobre"><span data-es="Nosotros" data-en="About"></span></a></li>
+    <li><a href="#contacto"><span data-es="Contacto" data-en="Contact"></span></a></li>
+  </ul>
+  <a href="https://t.me/Legi0n_St0re" target="_blank" rel="noopener" class="nav-cta">
+    <span data-es="CANAL →" data-en="CHANNEL →"></span>
+  </a>
+  <button class="nav-menu-btn" onclick="openMobileMenu()" aria-label="Open menu" aria-expanded="false">
+    <span data-es="MENÚ ☰" data-en="MENU ☰"></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+
+    <div class="global-badge" aria-label="Global service">
+      <span class="globe-anim" aria-hidden="true">🌍</span>
+      <span data-es="SERVICIO GLOBAL · 24H · REMOTO" data-en="GLOBAL SERVICE · 24H · REMOTE"></span>
+    </div>
+
+    <div class="hero-eyebrow" aria-hidden="true">
+      <div class="eyebrow-line"></div>
+      <span data-es="SEGURIDAD DIGITAL · PRIVACIDAD · TECNOLOGÍA" data-en="DIGITAL SECURITY · PRIVACY · TECHNOLOGY"></span>
+      <div class="eyebrow-line"></div>
+    </div>
+
+    <h1 class="hero-h1">
+      <span class="h1-line1" data-es="TU VIDA" data-en="YOUR DIGITAL"></span>
+      <span class="h1-line2" data-es="DIGITAL" data-en="LIFE"></span>
+      <span class="h1-line3" data-es="PROTEGIDA." data-en="PROTECTED."></span>
+    </h1>
+
+    <p class="hero-sub">
+      <span data-es="Servicios expertos en <strong>privacidad digital, ciberseguridad y configuración tecnológica</strong>. Resultados concretos en menos de 24 horas. Sin burocracia. Para clientes en todo el mundo."></span>
+      <span data-en="Expert services in <strong>digital privacy, cybersecurity and technology setup</strong>. Concrete results in under 24 hours. No hassle. Serving clients worldwide."></span>
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#servicios" class="btn-primary">
+        <span data-es="VER SERVICIOS →" data-en="VIEW SERVICES →"></span>
+      </a>
+      <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="btn-secondary btn-wa">
+        💬 WhatsApp
+      </a>
+      <a href="https://t.me/Legi0n_St0re" target="_blank" rel="noopener" class="btn-secondary">
+        <span data-es="UNIRSE AL CANAL" data-en="JOIN CHANNEL"></span>
+      </a>
+    </div>
+
+    <div class="market-flags" aria-label="Markets served">
+      <div class="mf"><span class="mf-flag">🇺🇸</span> USA</div>
+      <div class="mf"><span class="mf-flag">🇪🇸</span> España</div>
+      <div class="mf"><span class="mf-flag">🇬🇧</span> UK</div>
+      <div class="mf"><span class="mf-flag">🇩🇪</span> Germany</div>
+      <div class="mf"><span class="mf-flag">🇲🇽</span> México</div>
+      <div class="mf"><span class="mf-flag">🇦🇺</span> Australia</div>
+      <div class="mf"><span class="mf-flag">🇯🇵</span> Japan</div>
+      <div class="mf"><span class="mf-flag">🌐</span> <span data-es="+ 50 países" data-en="+ 50 countries"></span></div>
+    </div>
+
+    <div class="hero-stats" role="list">
+      <div class="stat-box" role="listitem">
+        <div class="stat-val">50+</div>
+        <div class="stat-lbl"><span data-es="Países" data-en="Countries"></span></div>
+      </div>
+      <div class="stat-box" role="listitem">
+        <div class="stat-val">24h</div>
+        <div class="stat-lbl"><span data-es="Resp. máx." data-en="Max response"></span></div>
+      </div>
+      <div class="stat-box" role="listitem">
+        <div class="stat-val">100%</div>
+        <div class="stat-lbl"><span data-es="Confidencial" data-en="Confidential"></span></div>
+      </div>
+      <div class="stat-box" role="listitem">
+        <div class="stat-val">3</div>
+        <div class="stat-lbl"><span data-es="Canales contacto" data-en="Contact channels"></span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item"><div class="marquee-dot"></div>PRIVACY iPHONE</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>USA ACCOUNTS</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>VPN & ANONYMITY</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>ANDROID SECURITY</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>PAYPAL · WISE · ZELLE</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>DIGITAL AUDIT</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>REMOTE SUPPORT 24H</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>PRIVACIDAD iPHONE</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>CUENTAS USA</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>VPN & ANONIMATO</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>SEGURIDAD ANDROID</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>AUDITORÍA DIGITAL</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>SOPORTE REMOTO</div>
+    <!-- repeat -->
+    <div class="marquee-item"><div class="marquee-dot"></div>PRIVACY iPHONE</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>USA ACCOUNTS</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>VPN & ANONYMITY</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>ANDROID SECURITY</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>PAYPAL · WISE · ZELLE</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>DIGITAL AUDIT</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>REMOTE SUPPORT 24H</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>PRIVACIDAD iPHONE</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>CUENTAS USA</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>VPN & ANONIMATO</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>SEGURIDAD ANDROID</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>AUDITORÍA DIGITAL</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>SOPORTE REMOTO</div>
+  </div>
+</div>
+
+<div class="gold-div"></div>
+
+<!-- SERVICES -->
+<section class="section section-alt" id="servicios" aria-labelledby="srv-h">
+  <div class="container">
+    <div class="services-intro fade-up">
+      <div>
+        <div class="section-tag"><span data-es="SERVICIOS" data-en="SERVICES"></span></div>
+        <h2 class="section-h" id="srv-h">
+          <span style="color:#fff" data-es="LO QUE" data-en="WHAT WE"></span><br>
+          <span class="gold-text" data-es="HACEMOS" data-en="DO"></span>
+        </h2>
+      </div>
+      <div class="services-intro-right">
+        <p><span data-es="No somos una tienda genérica. Somos <strong>especialistas en privacidad digital</strong> — el problema que más personas tienen y menos saben resolver. Clientes en más de 50 países."></span><span data-en="We're not a generic tech shop. We're <strong>digital privacy specialists</strong> — the problem most people have and few know how to solve. Clients in 50+ countries."></span></p>
+        <p><span data-es="Cada servicio tiene un resultado concreto, tiempo de entrega definido y soporte post-entrega incluido. <strong>Primera consulta siempre gratis.</strong>"></span><span data-en="Every service has a concrete result, defined delivery time and post-delivery support included. <strong>First consultation always free.</strong>"></span></p>
+      </div>
+    </div>
+
+    <div class="services-grid fade-up">
+
+      <article class="service-card">
+        <div class="service-card-num">01</div>
+        <span class="service-icon" aria-hidden="true">🔐</span>
+        <div class="service-tag"><span data-es="SEGURIDAD · ESENCIAL" data-en="SECURITY · ESSENTIAL"></span></div>
+        <div class="service-name"><span data-es="BLINDAJE DE PRIVACIDAD" data-en="PRIVACY SHIELD"></span></div>
+        <p class="service-desc"><span data-es="Configuración completa de privacidad en iPhone o Android. 20+ ajustes críticos que la mayoría desconoce. Sesión remota guiada." data-en="Complete privacy configuration for iPhone or Android. 20+ critical settings most people miss. Guided remote session."></span></p>
+        <div class="service-features">
+          <div class="sf"><span data-es="Auditoría de permisos de apps" data-en="App permissions audit"></span></div>
+          <div class="sf"><span data-es="Face ID y código de seguridad" data-en="Face ID & secure passcode setup"></span></div>
+          <div class="sf"><span data-es="Protección contra robo activada" data-en="Theft protection activated"></span></div>
+          <div class="sf"><span data-es="Ajustes navegador y notificaciones" data-en="Browser & notification settings"></span></div>
+        </div>
+        <div class="service-price"><span data-es="DESDE $15 USD" data-en="FROM $15 USD"></span></div>
+        <div class="service-ctas">
+          <a href="https://t.me/legioneternity" target="_blank" rel="noopener" class="service-cta">✈️ <span data-es="Solicitar por Telegram →" data-en="Request via Telegram →"></span></a>
+          <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="service-cta">💬 <span data-es="Solicitar por WhatsApp →" data-en="Request via WhatsApp →"></span></a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-num">02</div>
+        <span class="service-icon" aria-hidden="true">💳</span>
+        <div class="service-tag"><span data-es="FINANZAS DIGITALES" data-en="DIGITAL FINANCE"></span></div>
+        <div class="service-name"><span data-es="CUENTAS USA VERIFICADAS" data-en="VERIFIED USA ACCOUNTS"></span></div>
+        <p class="service-desc"><span data-es="Setup completo de PayPal, Wise y servicios financieros digitales. Proceso documentado con soporte post-setup." data-en="Complete setup of PayPal, Wise and US digital financial services. Documented process with post-setup support."></span></p>
+        <div class="service-features">
+          <div class="sf"><span data-es="Proceso de verificación guiado" data-en="Guided verification process"></span></div>
+          <div class="sf"><span data-es="Resolución de limitaciones de cuenta" data-en="Account limitation resolution"></span></div>
+          <div class="sf"><span data-es="Métodos de retiro configurados" data-en="Withdrawal methods configured"></span></div>
+          <div class="sf"><span data-es="Soporte 30 días post-setup" data-en="30-day post-setup support"></span></div>
+        </div>
+        <div class="service-price"><span data-es="DESDE $20 USD" data-en="FROM $20 USD"></span></div>
+        <div class="service-ctas">
+          <a href="https://t.me/legioneternity" target="_blank" rel="noopener" class="service-cta">✈️ <span data-es="Solicitar por Telegram →" data-en="Request via Telegram →"></span></a>
+          <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="service-cta">💬 <span data-es="Solicitar por WhatsApp →" data-en="Request via WhatsApp →"></span></a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-num">03</div>
+        <span class="service-icon" aria-hidden="true">🌐</span>
+        <div class="service-tag"><span data-es="ANONIMATO · ACCESO" data-en="ANONYMITY · ACCESS"></span></div>
+        <div class="service-name"><span data-es="VPN CONFIGURADO" data-en="VPN SETUP"></span></div>
+        <p class="service-desc"><span data-es="VPN premium instalado y configurado. Navegación privada, acceso a contenido restringido, protección en redes públicas." data-en="Premium VPN installed and configured. Private browsing, restricted content access, public network protection."></span></p>
+        <div class="service-features">
+          <div class="sf"><span data-es="VPN seleccionado según tu caso" data-en="VPN selected for your use case"></span></div>
+          <div class="sf"><span data-es="Instalación y configuración guiada" data-en="Guided installation & configuration"></span></div>
+          <div class="sf"><span data-es="Configuración kill switch" data-en="Kill switch configuration"></span></div>
+          <div class="sf"><span data-es="Soporte técnico incluido" data-en="Technical support included"></span></div>
+        </div>
+        <div class="service-price"><span data-es="$10-15 USD/MES" data-en="$10-15 USD/MO"></span></div>
+        <div class="service-ctas">
+          <a href="https://t.me/legioneternity" target="_blank" rel="noopener" class="service-cta">✈️ <span data-es="Solicitar por Telegram →" data-en="Request via Telegram →"></span></a>
+          <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="service-cta">💬 <span data-es="Solicitar por WhatsApp →" data-en="Request via WhatsApp →"></span></a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-num">04</div>
+        <span class="service-icon" aria-hidden="true">🔍</span>
+        <div class="service-tag"><span data-es="AUDITORÍA AVANZADA" data-en="ADVANCED AUDIT"></span></div>
+        <div class="service-name"><span data-es="AUDITORÍA DIGITAL" data-en="DIGITAL FOOTPRINT AUDIT"></span></div>
+        <p class="service-desc"><span data-es="Análisis completo de tu huella digital. Qué información existe sobre ti online y plan de acción para reducirla." data-en="Complete analysis of your digital footprint. What information exists about you online and an action plan to reduce it."></span></p>
+        <div class="service-features">
+          <div class="sf"><span data-es="Búsqueda exhaustiva en fuentes públicas" data-en="Exhaustive search across public sources"></span></div>
+          <div class="sf"><span data-es="Informe priorizado de riesgos" data-en="Prioritized risk report"></span></div>
+          <div class="sf"><span data-es="Solicitud de eliminación en data brokers" data-en="Data broker removal requests"></span></div>
+          <div class="sf"><span data-es="Plan de acción personalizado" data-en="Personalized action plan"></span></div>
+        </div>
+        <div class="service-price"><span data-es="DESDE $25 USD" data-en="FROM $25 USD"></span></div>
+        <div class="service-ctas">
+          <a href="https://t.me/legioneternity" target="_blank" rel="noopener" class="service-cta">✈️ <span data-es="Solicitar por Telegram →" data-en="Request via Telegram →"></span></a>
+          <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="service-cta">💬 <span data-es="Solicitar por WhatsApp →" data-en="Request via WhatsApp →"></span></a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-num">05</div>
+        <span class="service-icon" aria-hidden="true">🛡️</span>
+        <div class="service-tag"><span data-es="SOPORTE CONTINUO" data-en="ONGOING SUPPORT"></span></div>
+        <div class="service-name"><span data-es="SOPORTE TÉCNICO MENSUAL" data-en="MONTHLY TECH SUPPORT"></span></div>
+        <p class="service-desc"><span data-es="Tu experto digital de cabecera. Resolvemos cualquier problema tecnológico o de privacidad durante el mes." data-en="Your personal digital expert on retainer. We solve any technology or privacy issue throughout the month."></span></p>
+        <div class="service-features">
+          <div class="sf"><span data-es="Consultas ilimitadas por Telegram/WhatsApp" data-en="Unlimited queries via Telegram/WhatsApp"></span></div>
+          <div class="sf"><span data-es="Sesiones remotas incluidas" data-en="Remote sessions included"></span></div>
+          <div class="sf"><span data-es="Prioridad en respuesta" data-en="Priority response"></span></div>
+          <div class="sf"><span data-es="Actualizaciones de seguridad proactivas" data-en="Proactive security updates"></span></div>
+        </div>
+        <div class="service-price"><span data-es="$8-12 USD/MES" data-en="$8-12 USD/MO"></span></div>
+        <div class="service-ctas">
+          <a href="https://t.me/legioneternity" target="_blank" rel="noopener" class="service-cta">✈️ Telegram →</a>
+          <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="service-cta">💬 WhatsApp →</a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-num">06</div>
+        <span class="service-icon" aria-hidden="true">⭐</span>
+        <div class="service-tag"><span data-es="TODO INCLUIDO" data-en="ALL INCLUSIVE"></span></div>
+        <div class="service-name"><span data-es="LEGIÓN PREMIUM" data-en="LEGION PREMIUM"></span></div>
+        <p class="service-desc"><span data-es="El paquete completo: auditoría de huella digital + configuración de privacidad dispositivo + configuración redes sociales + soporte mensual." data-en="The complete package: digital footprint audit + device privacy config + social media privacy setup + monthly support."></span></p>
+        <div class="service-features">
+          <div class="sf"><span data-es="Todo lo de los servicios anteriores" data-en="Everything from previous services"></span></div>
+          <div class="sf"><span data-es="Consulta de seguridad completa" data-en="Complete security consultation"></span></div>
+          <div class="sf"><span data-es="Plan de privacidad personalizado" data-en="Personalized privacy plan"></span></div>
+          <div class="sf"><span data-es="Soporte prioritario 30 días" data-en="30-day priority support"></span></div>
+        </div>
+        <div class="service-price"><span data-es="DESDE $50 USD" data-en="FROM $50 USD"></span></div>
+        <div class="service-ctas">
+          <a href="https://t.me/legioneternity" target="_blank" rel="noopener" class="service-cta">✈️ Telegram →</a>
+          <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="service-cta">💬 WhatsApp →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="gold-div"></div>
+
+<!-- MARKETS -->
+<section class="section" id="mercados" aria-labelledby="mkt-h">
+  <div class="container">
+    <div class="section-tag fade-up"><span data-es="MERCADOS GLOBALES" data-en="GLOBAL MARKETS"></span></div>
+    <h2 class="section-h fade-up" id="mkt-h">
+      <span style="color:#fff" data-es="SERVIMOS" data-en="WE SERVE THE"></span><br>
+      <span class="gold-text" data-es="AL MUNDO" data-en="WORLD"></span>
+    </h2>
+    <p style="font-size:15px;color:var(--muted2);max-width:560px;line-height:1.75;margin-bottom:48px;" class="fade-up">
+      <span data-es="Sesiones 100% remotas. Pagos internacionales aceptados. Comunicación en español e inglés. Sin importar dónde estés."></span>
+      <span data-en="100% remote sessions. International payments accepted. Communication in Spanish and English. No matter where you are."></span>
+    </p>
+    <div class="markets-grid fade-up">
+      <div class="market-card">
+        <span class="mc-flag">🇺🇸🇨🇦</span>
+        <div class="mc-region">NORTH AMERICA</div>
+        <p class="mc-desc"><span data-es="EE.UU. y Canadá. Pagos via Zelle, PayPal, Wise. Atención en inglés y español." data-en="USA and Canada. Payments via Zelle, PayPal, Wise. Support in English and Spanish."></span></p>
+      </div>
+      <div class="market-card">
+        <span class="mc-flag">🇪🇸🇬🇧🇩🇪🇫🇷</span>
+        <div class="mc-region">EUROPE</div>
+        <p class="mc-desc"><span data-es="España, UK, Alemania, Francia y más. Pagos via PayPal, Wise, Transferencia." data-en="Spain, UK, Germany, France and more. Payments via PayPal, Wise, bank transfer."></span></p>
+      </div>
+      <div class="market-card">
+        <span class="mc-flag">🇲🇽🇦🇷🇨🇱🇨🇴</span>
+        <div class="mc-region">LATIN AMERICA</div>
+        <p class="mc-desc"><span data-es="México, Argentina, Chile, Colombia y toda la región. Español nativo." data-en="Mexico, Argentina, Chile, Colombia and the whole region. Native Spanish."></span></p>
+      </div>
+      <div class="market-card">
+        <span class="mc-flag">🇦🇺🇯🇵🇸🇬🇰🇷</span>
+        <div class="mc-region">ASIA-PACIFIC</div>
+        <p class="mc-desc"><span data-es="Australia, Japón, Singapur, Corea. Pagos via PayPal, Wise. Atención en inglés." data-en="Australia, Japan, Singapore, Korea. Payments via PayPal, Wise. English support."></span></p>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;padding:22px 24px;background:var(--gold-faint);border:1px solid var(--border);border-left:3px solid var(--gold);" class="fade-up">
+      <div style="font-family:'Orbitron',sans-serif;font-size:7px;letter-spacing:3px;color:var(--gold);margin-bottom:8px;"><span data-es="MÉTODOS DE PAGO GLOBALES" data-en="GLOBAL PAYMENT METHODS"></span></div>
+      <div style="font-size:14px;color:var(--muted2);display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+        <span>💳 PayPal</span><span>🏦 Wise</span><span>💵 Zelle (USA)</span><span>🌐 Tropipay</span><span>📱 Transfermóvil</span><span>🔒 Crypto (consultar)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-div"></div>
+
+<!-- ABOUT -->
+<section class="section section-alt" id="sobre" aria-labelledby="about-h">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="section-tag fade-up"><span data-es="SOBRE NOSOTROS" data-en="ABOUT US"></span></div>
+        <h2 class="section-h fade-up" id="about-h">
+          <span style="color:#fff" data-es="POR QUÉ" data-en="WHY"></span><br>
+          <span class="gold-text" data-es="LEGIÓN DIGITAL" data-en="LEGION DIGITAL"></span>
+        </h2>
+        <p style="font-size:15px;color:var(--muted2);line-height:1.8;margin-bottom:32px;" class="fade-up">
+          <span data-es="Somos un equipo especializado en privacidad digital y ciberseguridad con presencia global. Nacimos para resolver el problema que más personas tienen pero menos saben cómo solucionar. Operamos de forma 100% remota, en español e inglés, para clientes en todo el mundo."></span>
+          <span data-en="We're a team specialized in digital privacy and cybersecurity with global reach. We were born to solve the problem most people have but few know how to fix. We operate 100% remotely, in Spanish and English, for clients worldwide."></span>
+        </p>
+        <div class="trust-items fade-up">
+          <div class="trust-item">
+            <div class="ti-icon" aria-hidden="true">🌍</div>
+            <div>
+              <div class="ti-title"><span data-es="Alcance Global" data-en="Global Reach"></span></div>
+              <div class="ti-desc"><span data-es="Clientes en más de 50 países. Sesiones remotas en cualquier zona horaria. Español e inglés." data-en="Clients in 50+ countries. Remote sessions in any timezone. Spanish and English."></span></div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="ti-icon" aria-hidden="true">⚡</div>
+            <div>
+              <div class="ti-title"><span data-es="Resultados en 24h" data-en="Results in 24h"></span></div>
+              <div class="ti-desc"><span data-es="Respuesta garantizada en menos de 24 horas. Sin burocracia, sin esperas indefinidas." data-en="Guaranteed response in under 24 hours. No bureaucracy, no indefinite waits."></span></div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="ti-icon" aria-hidden="true">🔒</div>
+            <div>
+              <div class="ti-title"><span data-es="100% Confidencial" data-en="100% Confidential"></span></div>
+              <div class="ti-desc"><span data-es="Toda información compartida es completamente confidencial. Privacidad es nuestra especialidad." data-en="All shared information is completely confidential. Privacy is our specialty."></span></div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="ti-icon" aria-hidden="true">💬</div>
+            <div>
+              <div class="ti-title"><span data-es="3 Canales de Contacto" data-en="3 Contact Channels"></span></div>
+              <div class="ti-desc"><span data-es="Telegram, WhatsApp y Email. Llegas a nosotros desde donde prefieras." data-en="Telegram, WhatsApp and Email. Reach us from wherever you prefer."></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shield-wrap fade-up" aria-hidden="true">
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring"></div>
+        <div class="shield-core">
+          <span class="shield-emoji">🛡️</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-div"></div>
+
+<!-- SERIES / CONTENT -->
+<section class="section" id="serie" aria-labelledby="series-h">
+  <div class="container">
+    <div class="section-tag fade-up"><span data-es="CONTENIDO EDUCATIVO" data-en="EDUCATIONAL CONTENT"></span></div>
+    <h2 class="section-h fade-up" id="series-h">
+      <span style="color:#fff" data-es="SERIE" data-en="PRIVACY"></span><br>
+      <span class="gold-text" data-es="PRIVACIDAD DIGITAL" data-en="DIGITAL SERIES"></span>
+    </h2>
+    <p style="font-size:15px;color:var(--muted2);max-width:520px;line-height:1.75;margin-bottom:48px;" class="fade-up">
+      <span data-es="7 episodios gratuitos. Todo lo que necesitas saber sobre privacidad digital explicado de forma práctica. Disponible en Telegram y Facebook." data-en="7 free episodes. Everything you need to know about digital privacy explained practically. Available on Telegram and Facebook."></span>
+    </p>
+    <div class="eps-week fade-up" role="list">
+      <div class="ep-box" role="listitem"><div class="ep-day">EP 01</div><div class="ep-num">🔍</div><div class="ep-title"><span data-es="Vigilancia masiva" data-en="Mass surveillance"></span></div></div>
+      <div class="ep-box" role="listitem"><div class="ep-day">EP 02</div><div class="ep-num">🔐</div><div class="ep-title"><span data-es="Credenciales" data-en="Credentials"></span></div></div>
+      <div class="ep-box" role="listitem"><div class="ep-day">EP 03</div><div class="ep-num">📍</div><div class="ep-title"><span data-es="Localización" data-en="Location tracking"></span></div></div>
+      <div class="ep-box" role="listitem"><div class="ep-day">EP 04</div><div class="ep-num">📷</div><div class="ep-title"><span data-es="Metadatos EXIF" data-en="EXIF Metadata"></span></div></div>
+      <div class="ep-box" role="listitem"><div class="ep-day">EP 05</div><div class="ep-num">💬</div><div class="ep-title"><span data-es="Privacidad WhatsApp" data-en="WhatsApp privacy"></span></div></div>
+      <div class="ep-box" role="listitem"><div class="ep-day">EP 06</div><div class="ep-num">🌐</div><div class="ep-title"><span data-es="Navegadores" data-en="Browsers"></span></div></div>
+      <div class="ep-box" role="listitem"><div class="ep-day">EP 07</div><div class="ep-num">🎣</div><div class="ep-title"><span data-es="Phishing" data-en="Phishing attacks"></span></div></div>
+    </div>
+    <div class="platforms-grid fade-up">
+      <div class="plat-box">
+        <div class="plat-name plat-tg">✈️ TELEGRAM</div>
+        <div class="plat-title"><span data-es="Canal Principal" data-en="Main Channel"></span></div>
+        <p class="plat-desc"><span data-es="Tips diarios. Episodios completos. Comunidad activa. Contenido gratuito permanente." data-en="Daily tips. Full episodes. Active community. Permanently free content."></span></p>
+        <a href="https://t.me/Legi0n_St0re" target="_blank" rel="noopener" class="plat-link">t.me/Legi0n_St0re →</a>
+      </div>
+      <div class="plat-box">
+        <div class="plat-name" style="color:var(--wa);">💬 WHATSAPP</div>
+        <div class="plat-title"><span data-es="Contacto Directo" data-en="Direct Contact"></span></div>
+        <p class="plat-desc"><span data-es="Mensajes directos para consultas y servicios. Respuesta rápida. Soporte personalizado." data-en="Direct messages for consultations and services. Fast response. Personalized support."></span></p>
+        <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="plat-link">wa.me/15722081823 →</a>
+      </div>
+      <div class="plat-box">
+        <div class="plat-name plat-fb">📘 FACEBOOK</div>
+        <div class="plat-title"><span data-es="Posts Educativos" data-en="Educational Posts"></span></div>
+        <p class="plat-desc"><span data-es="Publicaciones detalladas. Formato largo con instrucciones paso a paso. En español e inglés." data-en="Detailed posts. Long-form format with step-by-step instructions. In Spanish and English."></span></p>
+        <a href="#contacto" class="plat-link"><span data-es="Ver publicaciones →" data-en="View posts →"></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-div"></div>
+
+<!-- PRICING -->
+<section class="section section-alt" id="precios" aria-labelledby="price-h">
+  <div class="container">
+    <div class="section-tag fade-up"><span data-es="PRECIOS" data-en="PRICING"></span></div>
+    <h2 class="section-h fade-up" id="price-h">
+      <span style="color:#fff" data-es="PLANES" data-en="SIMPLE"></span><br>
+      <span class="gold-text" data-es="CLAROS" data-en="PLANS"></span>
+    </h2>
+    <p style="font-size:15px;color:var(--muted2);max-width:440px;line-height:1.75;margin-bottom:48px;" class="fade-up">
+      <span data-es="Sin sorpresas. Sin letra pequeña. Primera consulta siempre gratis." data-en="No surprises. No fine print. First consultation always free."></span>
+    </p>
+    <div class="pricing-grid fade-up">
+
+      <div class="price-card">
+        <div class="price-badge"><span data-es="BÁSICO" data-en="STARTER"></span></div>
+        <div class="price-tier"><span data-es="ESCUDO" data-en="SHIELD"></span></div>
+        <div class="price-amount"><span class="pa-from" data-es="desde " data-en="from "></span><span class="pa-curr">$15</span><span class="pa-unit"> USD</span></div>
+        <p class="price-desc"><span data-es="Privacidad en un dispositivo. Perfecto para empezar." data-en="Privacy on one device. Perfect to get started."></span></p>
+        <div class="price-features">
+          <div class="pf"><span class="check">✓</span><span data-es="Configuración privacidad iPhone o Android" data-en="iPhone or Android privacy config"></span></div>
+          <div class="pf"><span class="check">✓</span><span data-es="Auditoría de permisos" data-en="Permissions audit"></span></div>
+          <div class="pf"><span class="check">✓</span><span data-es="Guía de buenas prácticas" data-en="Best practices guide"></span></div>
+          <div class="pf"><span class="check">✓</span><span data-es="Soporte 7 días" data-en="7-day support"></span></div>
+        </div>
+        <div class="price-btns">
+          <a href="https://t.me/legioneternity" target="_blank" rel="noopener" class="price-btn pb-secondary">✈️ Telegram</a>
+          <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="price-btn pb-wa">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-badge hot">🔥 <span data-es="MÁS POPULAR" data-en="MOST POPULAR"></span></div>
+        <div class="price-tier"><span data-es="LEGIÓN" data-en="LEGION"></span></div>
+        <div class="price-amount"><span class="pa-from" data-es="desde " data-en="from "></span><span class="pa-curr">$35</span><span class="pa-unit"> USD</span></div>
+        <p class="price-desc"><span data-es="El paquete completo. Auditoría + dispositivo + redes sociales." data-en="The complete package. Audit + device + social media."></span></p>
+        <div class="price-features">
+          <div class="pf"><span class="check">✓</span><span data-es="Todo lo del plan Básico" data-en="Everything in Starter plan"></span></div>
+          <div class="pf"><span class="check">✓</span><span data-es="Auditoría de huella digital" data-en="Digital footprint audit"></span></div>
+          <div class="pf"><span class="check">✓</span><span data-es="Configuración privacidad redes sociales" data-en="Social media privacy config"></span></div>
+          <div class="pf"><span class="check">✓</span><span data-es="VPN configurado" data-en="VPN configured"></span></div>
+          <div class="pf"><span class="check">✓</span><span data-es="Soporte 30 días" data-en="30-day support"></span></div>
+        </div>
+        <div class="price-btns">
+          <a href="https://t.me/legioneternity" target="_blank" rel="noopener" class="price-btn pb-primary">✈️ Telegram →</a>
+          <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="price-btn pb-wa">💬 WhatsApp →</a>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <div class="price-badge"><span data-es="RECURRENTE" data-en="RECURRING"></span></div>
+        <div class="price-tier"><span data-es="PREMIUM" data-en="PREMIUM"></span></div>
+        <div class="price-amount"><span class="pa-from" data-es="desde " data-en="from "></span><span class="pa-curr">$8</span><span class="pa-unit"> <span data-es="USD/mes" data-en="USD/mo"></span></span></div>
+        <p class="price-desc"><span data-es="Tu experto digital de cabecera. Soporte mensual continuo." data-en="Your personal digital expert on retainer. Ongoing monthly support."></span></p>
+        <div class="price-features">
+          <div class="pf"><span class="check">✓</span><span data-es="Consultas ilimitadas" data-en="Unlimited consultations"></span></div>
+          <div class="pf"><span class="check">✓</span><span data-es="Sesiones remotas incluidas" data-en="Remote sessions included"></span></div>
+          <div class="pf"><span class="check">✓</span><span data-es="Prioridad de respuesta" data-en="Priority response"></span></div>
+          <div class="pf"><span class="check">✓</span><span data-es="Acceso a canal privado" data-en="Private channel access"></span></div>
+        </div>
+        <div class="price-btns">
+          <a href="https://t.me/legioneternity" target="_blank" rel="noopener" class="price-btn pb-secondary">✈️ Telegram</a>
+          <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="price-btn pb-wa">💬 WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="gold-div"></div>
+
+<!-- CONTACT -->
+<section class="section" id="contacto" aria-labelledby="contact-h">
+  <div class="container">
+    <div class="section-tag fade-up"><span data-es="CONTACTO" data-en="CONTACT"></span></div>
+    <h2 class="section-h fade-up" id="contact-h">
+      <span style="color:#fff" data-es="EMPIEZA" data-en="START"></span><br>
+      <span class="gold-text" data-es="AHORA" data-en="NOW"></span>
+    </h2>
+    <p style="font-size:15px;color:var(--muted2);max-width:440px;line-height:1.75;margin-bottom:48px;" class="fade-up">
+      <span data-es="Respuesta garantizada en menos de 24 horas. Primera consulta completamente gratis. 3 formas de contactarnos." data-en="Guaranteed response in under 24 hours. First consultation completely free. 3 ways to reach us."></span>
+    </p>
+
+    <div class="contact-grid fade-up">
+      <div class="contact-info">
+
+        <div class="ci">
+          <div class="ci-icon" aria-hidden="true">✈️</div>
+          <div>
+            <div class="ci-label"><span data-es="CANAL TELEGRAM" data-en="TELEGRAM CHANNEL"></span></div>
+            <div class="ci-val"><a href="https://t.me/Legi0n_St0re" target="_blank" rel="noopener">t.me/Legi0n_St0re</a></div>
+          </div>
+        </div>
+
+        <div class="ci">
+          <div class="ci-icon" aria-hidden="true">💬</div>
+          <div>
+            <div class="ci-label"><span data-es="SOPORTE TELEGRAM" data-en="TELEGRAM SUPPORT"></span></div>
+            <div class="ci-val"><a href="https://t.me/legioneternity" target="_blank" rel="noopener">@legioneternity</a></div>
+          </div>
+        </div>
+
+        <div class="ci ci-wa">
+          <div class="ci-icon" aria-hidden="true">📱</div>
+          <div>
+            <div class="ci-label">WHATSAPP</div>
+            <div class="ci-val"><a href="https://wa.me/15722081823" target="_blank" rel="noopener" style="color:var(--wa);">+1 (572) 208-1823</a></div>
+          </div>
+        </div>
+
+        <div class="ci">
+          <div class="ci-icon" aria-hidden="true">✉️</div>
+          <div>
+            <div class="ci-label">EMAIL</div>
+            <div class="ci-val"><a href="mailto:soporte.upon273@passinbox.com">soporte.upon273@passinbox.com</a></div>
+          </div>
+        </div>
+
+        <div class="ci" style="border-bottom:1px solid var(--border2);margin-bottom:20px;">
+          <div class="ci-icon" aria-hidden="true">💳</div>
+          <div>
+            <div class="ci-label"><span data-es="MÉTODOS DE PAGO" data-en="PAYMENT METHODS"></span></div>
+            <div class="ci-val" style="font-size:13px;">PayPal · Zelle · Wise · Tropipay · Transfermóvil</div>
+          </div>
+        </div>
+
+        <div class="free-consult">
+          <div class="fc-tag"><span data-es="PRIMERA CONSULTA" data-en="FIRST CONSULTATION"></span></div>
+          <p class="fc-text">
+            <strong><span data-es="Completamente gratis." data-en="Completely free."></span></strong>
+            <span data-es=" Cuéntanos tu problema y te decimos exactamente qué necesitas, cuánto cuesta y en cuánto tiempo. Sin compromisos." data-en=" Tell us your problem and we'll tell you exactly what you need, how much it costs and how long it takes. No commitment."></span>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="contact-form">
+        <div class="cf-title"><span data-es="¿EN QUÉ TE AYUDO?" data-en="HOW CAN I HELP?"></span></div>
+        <p class="cf-sub"><span data-es="Completa el formulario y te contactamos. O escríbenos directamente por WhatsApp o Telegram." data-en="Fill out the form and we'll reach out. Or message us directly on WhatsApp or Telegram."></span></p>
+
+        <div class="cf-group">
+          <label class="cf-label" for="srv"><span data-es="SERVICIO QUE NECESITAS" data-en="SERVICE YOU NEED"></span></label>
+          <select class="cf-select" id="srv">
+            <option value="" data-es="Seleccionar..." data-en="Select..."></option>
+            <option data-es="Blindaje privacidad iPhone/Android ($15+)" data-en="iPhone/Android privacy shield ($15+)"></option>
+            <option data-es="Setup cuenta digital USA — PayPal/Wise ($20+)" data-en="USA digital account setup — PayPal/Wise ($20+)"></option>
+            <option data-es="VPN configurado ($10-15/mes)" data-en="VPN configured ($10-15/mo)"></option>
+            <option data-es="Auditoría huella digital ($25+)" data-en="Digital footprint audit ($25+)"></option>
+            <option data-es="Soporte técnico mensual ($8-12/mes)" data-en="Monthly tech support ($8-12/mo)"></option>
+            <option data-es="Paquete Legión Completo ($35+)" data-en="Legion Complete Package ($35+)"></option>
+            <option data-es="Consulta gratis — no sé qué necesito" data-en="Free consultation — not sure what I need"></option>
+          </select>
+        </div>
+        <div class="cf-group">
+          <label class="cf-label" for="cont"><span data-es="TU CONTACTO (TELEGRAM / WHATSAPP / EMAIL)" data-en="YOUR CONTACT (TELEGRAM / WHATSAPP / EMAIL)"></span></label>
+          <input type="text" class="cf-input" id="cont" placeholder="@usuario / +1 555 000 0000 / email">
+        </div>
+        <div class="cf-group">
+          <label class="cf-label" for="msg"><span data-es="CUÉNTAME TU SITUACIÓN" data-en="TELL ME YOUR SITUATION"></span></label>
+          <textarea class="cf-textarea" id="msg" placeholder="..."></textarea>
+        </div>
+        <div class="cf-actions">
+          <button class="cf-btn cf-btn-tg" onclick="sendTG()">✈️ <span data-es="ENVIAR A TELEGRAM →" data-en="SEND TO TELEGRAM →"></span></button>
+          <button class="cf-btn cf-btn-wa" onclick="sendWA()">💬 <span data-es="ENVIAR A WHATSAPP →" data-en="SEND TO WHATSAPP →"></span></button>
+          <button class="cf-btn cf-btn-email" onclick="sendEmail()">✉️ <span data-es="ENVIAR POR EMAIL →" data-en="SEND VIA EMAIL →"></span></button>
+        </div>
+        <p class="cf-note"><span data-es="Al hacer clic abrirás la app de contacto seleccionada con el mensaje listo." data-en="Clicking will open the selected contact app with the message ready to send."></span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="footer-logo">LEGIÓN DIGITAL</span>
+      <p class="footer-tagline"><span data-es="Privacidad digital y ciberseguridad para el mundo. 100% remoto. Español e inglés." data-en="Digital privacy and cybersecurity for the world. 100% remote. Spanish and English."></span></p>
+    </div>
+    <div>
+      <div class="footer-col-title"><span data-es="NAVEGACIÓN" data-en="NAVIGATION"></span></div>
+      <div class="footer-links">
+        <a href="#servicios"><span data-es="Servicios" data-en="Services"></span></a>
+        <a href="#precios"><span data-es="Precios" data-en="Pricing"></span></a>
+        <a href="#mercados"><span data-es="Mercados" data-en="Markets"></span></a>
+        <a href="#sobre"><span data-es="Nosotros" data-en="About"></span></a>
+        <a href="#serie"><span data-es="Serie" data-en="Series"></span></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title"><span data-es="CONTACTO" data-en="CONTACT"></span></div>
+      <div class="footer-contact-links">
+        <a href="https://t.me/Legi0n_St0re" target="_blank" rel="noopener">✈️ Telegram</a>
+        <a href="https://wa.me/15722081823" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="mailto:soporte.upon273@passinbox.com">✉️ Email</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title"><span data-es="PAGO" data-en="PAYMENT"></span></div>
+      <div class="footer-links">
+        <a>PayPal</a><a>Zelle</a><a>Wise</a><a>Tropipay</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025-2026 LEGIÓN DIGITAL · <span data-es="TODOS LOS DERECHOS RESERVADOS" data-en="ALL RIGHTS RESERVED"></span></div>
+    <div class="footer-certifs">
+      <div class="fc">🌍 GLOBAL</div>
+      <div class="fc">🔐 SECURE</div>
+      <div class="fc">24H RESPONSE</div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-stack" aria-label="Quick contact">
+  <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="float-btn fb-wa" aria-label="Contact on WhatsApp">
+    💬 WhatsApp
+  </a>
+  <a href="https://t.me/legioneternity" target="_blank" rel="noopener" class="float-btn fb-tg" aria-label="Contact on Telegram">
+    ✈️ <span data-es="CONSULTA GRATIS" data-en="FREE CONSULT"></span>
+  </a>
+</div>
+
+<script>
+/* ════════════════════════════════════════════
+   LEGIÓN DIGITAL — GLOBAL JAVASCRIPT ENGINE
+   ════════════════════════════════════════════ */
+
+// ─── LANGUAGE SYSTEM ───
+const T = {
+  es: {
+    // nav
+    nav_srv:'Servicios', nav_price:'Precios', nav_mkt:'Mercados', nav_about:'Nosotros', nav_contact:'Contacto', nav_cta:'CANAL →',
+    // select options (form)
+    sel0:'Seleccionar...', sel1:'Blindaje privacidad iPhone/Android ($15+)', sel2:'Setup cuenta digital USA — PayPal/Wise ($20+)', sel3:'VPN configurado ($10-15/mes)', sel4:'Auditoría huella digital ($25+)', sel5:'Soporte técnico mensual ($8-12/mes)', sel6:'Paquete Legión Completo ($35+)', sel7:'Consulta gratis — no sé qué necesito',
+    msg_placeholder:'Qué necesitas, qué dispositivo tienes, en qué país estás, cualquier detalle relevante...',
+  },
+  en: {
+    nav_srv:'Services', nav_price:'Pricing', nav_mkt:'Markets', nav_about:'About', nav_contact:'Contact', nav_cta:'CHANNEL →',
+    sel0:'Select...', sel1:'iPhone/Android privacy shield ($15+)', sel2:'USA digital account setup — PayPal/Wise ($20+)', sel3:'VPN configured ($10-15/mo)', sel4:'Digital footprint audit ($25+)', sel5:'Monthly tech support ($8-12/mo)', sel6:'Legion Complete Package ($35+)', sel7:'Free consultation — not sure what I need',
+    msg_placeholder:'What you need, what device you have, what country you\'re in, any relevant details...',
+  }
+};
+
+let currentLang = 'es';
+
+function detectLang() {
+  // 1. URL param
+  const urlP = new URLSearchParams(window.location.search).get('lang');
+  if (urlP === 'en' || urlP === 'es') return urlP;
+  // 2. localStorage
+  const stored = localStorage.getItem('ld_lang');
+  if (stored) return stored;
+  // 3. Browser language / geolocation hint via navigator.language
+  const nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  // Spanish-speaking countries
+  const esLangs = ['es','es-es','es-mx','es-ar','es-co','es-cl','es-pe','es-ve','es-cu'];
+  if (esLangs.some(l => nav.startsWith(l.split('-')[0]) && !nav.startsWith('en'))) {
+    // If browser is Spanish but timezone suggests non-Spanish country → en
+    // Simple heuristic: if timezone contains America but not Latin America patterns
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const latamTz = ['America/Havana','America/Mexico','America/Argentina','America/Bogota','America/Lima','America/Santiago','America/Caracas','America/La_Paz','America/Asuncion','America/Montevideo','America/Guayaquil','America/Santo_Domingo','America/Panama','America/Costa_Rica','America/Guatemala','America/El_Salvador','America/Tegucigalpa','America/Managua','America/Puerto_Rico'];
+      const euTz = ['Europe/Madrid','Europe/London','Europe/Paris','Europe/Berlin','Europe/Rome'];
+      const isLatam = latamTz.some(t => tz.startsWith(t.split('/')[0]+'/') && latamTz.includes(tz));
+      const isEuEs = euTz.some(t => t === tz) && nav.startsWith('es');
+      if (isLatam || isEuEs) return 'es';
+    } catch(e) {}
+    if (nav.startsWith('es')) return 'es';
+  }
+  return 'en';
+}
+
+function setLang(lang, save=true) {
+  currentLang = lang;
+  if (save) localStorage.setItem('ld_lang', lang);
+  document.getElementById('html-root').lang = lang;
+
+  // Toggle active btn
+  document.getElementById('btn-es').classList.toggle('active', lang==='es');
+  document.getElementById('btn-es').setAttribute('aria-pressed', lang==='es');
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  document.getElementById('btn-en').setAttribute('aria-pressed', lang==='en');
+
+  // Update all [data-es] and [data-en] elements
+  document.querySelectorAll('[data-es],[data-en]').forEach(el => {
+    const val = el.getAttribute('data-'+lang);
+    if (val !== null) {
+      // If element has innerHTML markers (strong, etc)
+      if (val.includes('<')) el.innerHTML = val;
+      else el.textContent = val;
+    }
+  });
+
+  // Update select options
+  const sel = document.getElementById('srv');
+  if (sel) {
+    const opts = ['sel0','sel1','sel2','sel3','sel4','sel5','sel6','sel7'];
+    opts.forEach((k,i) => { if (sel.options[i]) sel.options[i].text = T[lang][k]; });
+  }
+
+  // Update textarea placeholder
+  const msg = document.getElementById('msg');
+  if (msg) msg.placeholder = T[lang].msg_placeholder;
+
+  // Meta/title
+  if (lang==='en') {
+    document.title = 'Legión Digital — Digital Privacy & Security Services';
+    document.querySelector('meta[name="description"]').content = 'Expert digital privacy and cybersecurity services. Remote sessions. Results in 24h. Serving USA, Europe, Asia, Australia.';
+  } else {
+    document.title = 'Legión Digital — Tu Escudo Digital Global';
+    document.querySelector('meta[name="description"]').content = 'Servicios expertos en privacidad digital y ciberseguridad. Sesiones remotas. Resultados en 24h. Clientes en todo el mundo.';
+  }
+}
+
+// ─── ACCESSIBILITY FONT ───
+function setFont(size) {
+  const html = document.getElementById('html-root');
+  html.classList.remove('text-lg','text-xl');
+  ['a11y-normal','a11y-lg','a11y-xl'].forEach(id => {
+    document.getElementById(id).classList.remove('active');
+    document.getElementById(id).setAttribute('aria-pressed','false');
+  });
+  const map = {normal:'a11y-normal',lg:'a11y-lg',xl:'a11y-xl'};
+  document.getElementById(map[size]).classList.add('active');
+  document.getElementById(map[size]).setAttribute('aria-pressed','true');
+  if (size==='lg') html.classList.add('text-lg');
+  if (size==='xl') html.classList.add('text-xl');
+  localStorage.setItem('ld_font', size);
+}
+
+// ─── CURSOR ───
+const dot = document.getElementById('dot');
+const ring = document.getElementById('ring');
+let mx=0, my=0, rx=0, ry=0;
+document.addEventListener('mousemove', e => {
+  mx=e.clientX; my=e.clientY;
+  dot.style.left=mx-3+'px'; dot.style.top=my-3+'px';
+});
+(function animRing(){
+  rx+=(mx-rx)*0.13; ry+=(my-ry)*0.13;
+  ring.style.left=rx-16+'px'; ring.style.top=ry-16+'px';
+  requestAnimationFrame(animRing);
+})();
+document.querySelectorAll('a,button,.service-card,.price-card,.market-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ dot.style.transform='scale(2.5)'; ring.style.borderColor='rgba(201,162,39,0.8)'; ring.style.width='48px'; ring.style.height='48px'; });
+  el.addEventListener('mouseleave',()=>{ dot.style.transform='scale(1)'; ring.style.borderColor='rgba(201,162,39,0.5)'; ring.style.width='32px'; ring.style.height='32px'; });
+});
+
+// ─── SCROLL PROGRESS ───
+const prog = document.getElementById('progress');
+document.addEventListener('scroll', () => {
+  const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+  prog.style.width = pct + '%';
+});
+
+// ─── NAV ───
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+// ─── INTERSECTION OBSERVER ───
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.10 });
+document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+// ─── MOBILE MENU ───
+function openMobileMenu() {
+  document.getElementById('mobileMenu').classList.add('open');
+  document.querySelector('.nav-menu-btn').setAttribute('aria-expanded','true');
+}
+function closeMobileMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.querySelector('.nav-menu-btn').setAttribute('aria-expanded','false');
+}
+
+// ─── CONTACT FUNCTIONS ───
+function getFormData() {
+  const s = document.getElementById('srv').value || (currentLang==='es' ? 'No especificado' : 'Not specified');
+  const c = document.getElementById('cont').value || (currentLang==='es' ? 'No indicado' : 'Not provided');
+  const m = document.getElementById('msg').value || (currentLang==='es' ? 'Sin mensaje' : 'No message');
+  return {s,c,m};
+}
+function sendTG() {
+  const {s,c,m} = getFormData();
+  const greeting = currentLang==='es'
+    ? `Hola Legión Digital!\n\nServicio: ${s}\nContacto: ${c}\nMensaje: ${m}`
+    : `Hello Legión Digital!\n\nService: ${s}\nContact: ${c}\nMessage: ${m}`;
+  window.open(`https://t.me/legioneternity?text=${encodeURIComponent(greeting)}`, '_blank');
+}
+function sendWA() {
+  const {s,c,m} = getFormData();
+  const greeting = currentLang==='es'
+    ? `Hola Legión Digital!\n\nServicio: ${s}\nContacto: ${c}\nMensaje: ${m}`
+    : `Hello Legión Digital!\n\nService: ${s}\nContact: ${c}\nMessage: ${m}`;
+  window.open(`https://wa.me/15722081823?text=${encodeURIComponent(greeting)}`, '_blank');
+}
+function sendEmail() {
+  const {s,c,m} = getFormData();
+  const sub = currentLang==='es' ? `Consulta: ${s}` : `Inquiry: ${s}`;
+  const body = currentLang==='es'
+    ? `Hola Legión Digital,\n\nServicio: ${s}\nContacto: ${c}\nMensaje: ${m}`
+    : `Hello Legión Digital,\n\nService: ${s}\nContact: ${c}\nMessage: ${m}`;
+  window.location.href = `mailto:soporte.upon273@passinbox.com?subject=${encodeURIComponent(sub)}&body=${encodeURIComponent(body)}`;
+}
+
+// ─── SMOOTH SCROLL ───
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior:'smooth' }); }
+  });
+});
+
+// ─── KEYBOARD NAVIGATION ───
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+
+// ─── INIT ───
+(function init() {
+  // Font preference
+  const savedFont = localStorage.getItem('ld_font') || 'normal';
+  setFont(savedFont);
+
+  // Language detection + set
+  const lang = detectLang();
+  setLang(lang, false);
+})();
+</script>
+</body>
+</html>
