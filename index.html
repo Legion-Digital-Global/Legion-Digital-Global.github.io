@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Legión Digital — Servicios digitales para cubanos y la diáspora. VPN, números virtuales, cuentas bancarias internacionales, privacidad digital, recargas Cuba. Desde $3 USD.">
+<meta name="keywords" content="servicios digitales Cuba, VPN Cuba, número virtual Cuba, cuenta bancaria Cuba, privacidad digital, recargas Cuba, diáspora cubana">
+<meta property="og:title" content="Legión Digital — Libertad Digital para Cubanos">
+<meta property="og:description" content="VPN · Números virtuales · Cuentas bancarias internacionales · Recargas · Privacidad digital. Todo desde $3 USD. Para cubanos en la isla y en la diáspora.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://legion-digital-global.github.io/">
+<title>Legión Digital — Libertad Digital para Cubanos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════
+   SISTEMA DE DISEÑO — LEGIÓN DIGITAL
+══════════════════════════════════════ */
+:root{
+  --bg:#020208; --bg2:#06060f; --bg3:#0a0a1a; --bg4:#0f0f22;
+  --gold:#c9a227; --gold2:#f0d060; --gold3:rgba(201,162,39,.12); --gold4:rgba(201,162,39,.05);
+  --snow:#e8ecff; --dim:#52567a; --fog:#1a1a30;
+  --neon:#00e87a; --neon2:rgba(0,232,122,.1);
+  --ice:#00cfff; --ice2:rgba(0,207,255,.08);
+  --red:#ff3b3b; --red2:rgba(255,59,59,.08);
+  --amber:#ff8c42;
+  --border:rgba(201,162,39,.1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{
+  background:var(--bg);color:var(--snow);
+  font-family:'Syne',sans-serif;overflow-x:hidden;
+  line-height:1.7;cursor:default;
+}
+
+/* SCANLINE */
+body::after{
+  content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(2,2,8,.18) 3px,rgba(2,2,8,.18) 4px);
+}
+
+/* GRAIN */
+body::before{
+  content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.018;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px;
+}
+
+::-webkit-scrollbar{width:2px;}
+::-webkit-scrollbar-thumb{background:var(--gold);}
+
+/* TYPOGRAPHY */
+.f-bebas{font-family:'Bebas Neue',sans-serif;}
+.f-mono{font-family:'IBM Plex Mono',monospace;}
+
+/* UTILS */
+.gold{color:var(--gold);}
+.neon{color:var(--neon);}
+.ice{color:var(--ice);}
+.dim{color:var(--dim);}
+.red{color:var(--red);}
+.hi{color:var(--snow);}
+
+/* KEYFRAMES */
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse-gold{0%,100%{box-shadow:0 0 0 0 rgba(201,162,39,.3)}50%{box-shadow:0 0 0 8px rgba(201,162,39,0)}}
+@keyframes pulse-neon{0%,100%{box-shadow:0 0 0 0 rgba(0,232,122,.25)}50%{box-shadow:0 0 0 8px rgba(0,232,122,0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes spin-slow{to{transform:rotate(360deg)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes glow-text{0%,100%{text-shadow:0 0 20px rgba(201,162,39,.4)}50%{text-shadow:0 0 40px rgba(201,162,39,.7),0 0 80px rgba(201,162,39,.2)}}
+
+/* ══ NAV ══ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:700;
+  height:56px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 28px;
+  background:rgba(2,2,8,.92);border-bottom:1px solid var(--border);
+  backdrop-filter:blur(20px);
+}
+.nav-brand{display:flex;align-items:center;gap:10px;}
+.nav-shield{
+  width:32px;height:32px;display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(201,162,39,.3);font-size:16px;
+  background:rgba(201,162,39,.04);
+}
+.nav-name{font-family:'Bebas Neue';font-size:18px;letter-spacing:5px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.nav-links{display:flex;align-items:center;gap:4px;}
+.nav-link{font-family:'IBM Plex Mono';font-size:8px;letter-spacing:1.5px;
+  padding:6px 12px;color:var(--dim);text-decoration:none;transition:.2s;border:1px solid transparent;}
+.nav-link:hover{color:var(--gold);border-color:var(--border);}
+.nav-cta{
+  font-family:'IBM Plex Mono';font-size:8px;letter-spacing:2px;
+  padding:8px 16px;background:var(--gold);color:#000;text-decoration:none;font-weight:700;
+  transition:.15s;border:none;cursor:pointer;
+}
+.nav-cta:hover{background:var(--gold2);}
+.nav-mobile-cta{display:none;}
+@media(max-width:700px){
+  .nav-links{display:none;}
+  .nav-mobile-cta{display:block;font-family:'IBM Plex Mono';font-size:8px;letter-spacing:1px;
+    padding:7px 12px;background:var(--gold);color:#000;text-decoration:none;font-weight:700;}
+}
+
+/* ══ HERO ══ */
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  padding:90px 28px 60px;position:relative;overflow:hidden;
+}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(201,162,39,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(201,162,39,.03) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%);
+}
+.hero-glow{
+  position:absolute;top:-20%;left:50%;transform:translateX(-50%);
+  width:800px;height:800px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,162,39,.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-content{position:relative;max-width:960px;margin:0 auto;text-align:center;}
+
+.hero-eyebrow{
+  font-family:'IBM Plex Mono';font-size:9px;letter-spacing:8px;
+  color:rgba(201,162,39,.4);margin-bottom:16px;
+  animation:up .5s ease both;
+}
+.hero-eyebrow span{
+  display:inline-flex;align-items:center;gap:8px;
+}
+.hero-eyebrow span::before,
+.hero-eyebrow span::after{content:'';width:28px;height:1px;background:rgba(201,162,39,.2);}
+
+.hero-title{
+  font-family:'Bebas Neue';
+  font-size:clamp(64px,13vw,140px);
+  line-height:.85;margin-bottom:10px;
+  animation:up .5s .1s ease both;
+}
+.hero-title .l1{display:block;color:#fff;}
+.hero-title .l2{
+  display:block;
+  background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 50%,var(--gold) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  animation:glow-text 3s ease infinite;
+}
+.hero-title .l3{display:block;font-size:.32em;letter-spacing:8px;color:var(--dim);margin-top:12px;}
+
+.hero-sub{
+  font-size:clamp(14px,2vw,17px);color:var(--dim);max-width:600px;margin:22px auto 36px;
+  line-height:1.9;animation:up .5s .2s ease both;
+}
+.hero-sub strong{color:var(--snow);}
+
+.hero-pills{
+  display:flex;flex-wrap:wrap;gap:8px;justify-content:center;
+  margin-bottom:40px;animation:up .5s .3s ease both;
+}
+.hero-pill{
+  font-family:'IBM Plex Mono';font-size:8px;letter-spacing:2px;
+  padding:7px 14px;border:1px solid var(--border);color:var(--dim);
+  background:rgba(201,162,39,.02);
+}
+.hero-pill.active{border-color:rgba(0,232,122,.25);color:var(--neon);background:var(--neon2);}
+
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:up .5s .4s ease both;}
+.btn-primary{
+  font-family:'IBM Plex Mono';font-size:10px;letter-spacing:3px;
+  padding:15px 36px;background:var(--gold);color:#000;text-decoration:none;font-weight:700;
+  transition:.2s;animation:pulse-gold 2.5s infinite;display:inline-block;
+}
+.btn-primary:hover{background:var(--gold2);transform:translateY(-2px);}
+.btn-secondary{
+  font-family:'IBM Plex Mono';font-size:10px;letter-spacing:3px;
+  padding:15px 36px;border:1px solid var(--border);color:var(--snow);text-decoration:none;
+  transition:.2s;background:transparent;cursor:pointer;display:inline-block;
+}
+.btn-secondary:hover{border-color:var(--gold);color:var(--gold);}
+
+.hero-scroll{
+  position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
+  font-family:'IBM Plex Mono';font-size:7.5px;letter-spacing:3px;color:var(--dim);
+  display:flex;flex-direction:column;align-items:center;gap:8px;animation:up 1s .8s ease both;
+}
+.hero-scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold3),transparent);}
+
+/* ══ SECTIONS COMMON ══ */
+section{padding:100px 28px;}
+.section-inner{max-width:1060px;margin:0 auto;}
+.section-eyebrow{
+  font-family:'IBM Plex Mono';font-size:8px;letter-spacing:6px;
+  color:rgba(201,162,39,.25);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.section-eyebrow::after{content:'';flex:1;max-width:60px;height:1px;background:rgba(201,162,39,.1);}
+.section-title{
+  font-family:'Bebas Neue';font-size:clamp(36px,6vw,72px);
+  line-height:.85;margin-bottom:20px;
+}
+.section-sub{font-size:15px;color:var(--dim);max-width:560px;line-height:1.9;}
+
+/* ══ MARQUEE ══ */
+.marquee-wrap{
+  background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:13px 0;overflow:hidden;position:relative;
+}
+.marquee-track{display:flex;gap:0;animation:marquee 30s linear infinite;}
+.marquee-item{
+  font-family:'IBM Plex Mono';font-size:9px;letter-spacing:3px;
+  color:rgba(201,162,39,.25);white-space:nowrap;padding:0 28px;
+  flex-shrink:0;display:flex;align-items:center;gap:8px;
+}
+.marquee-item::before{content:'◆';font-size:5px;color:rgba(201,162,39,.2);}
+@keyframes marquee{to{transform:translateX(-50%);}}
+
+/* ══ STATS BAR ══ */
+.stats-bar{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:1px;background:var(--border);border:1px solid var(--border);
+  margin-bottom:80px;
+}
+.stat-item{
+  background:var(--bg2);padding:28px 24px;text-align:center;
+  transition:.2s;
+}
+.stat-item:hover{background:var(--bg3);}
+.stat-num{font-family:'Bebas Neue';font-size:42px;line-height:1;margin-bottom:4px;}
+.stat-lbl{font-family:'IBM Plex Mono';font-size:7.5px;letter-spacing:2px;color:var(--dim);}
+
+/* ══ SERVICIOS ══ */
+.services-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:1px;background:var(--border);border:1px solid var(--border);
+}
+.service-card{
+  background:var(--bg2);padding:28px;position:relative;overflow:hidden;
+  transition:background .2s;cursor:default;
+}
+.service-card:hover{background:var(--bg3);}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+.service-card.c-gold::before{background:linear-gradient(90deg,var(--gold),var(--gold2),transparent);}
+.service-card.c-neon::before{background:linear-gradient(90deg,var(--neon),#00b050,transparent);}
+.service-card.c-ice::before{background:linear-gradient(90deg,var(--ice),#0088cc,transparent);}
+.service-card.c-amber::before{background:linear-gradient(90deg,var(--amber),#cc5500,transparent);}
+.service-card.c-red::before{background:linear-gradient(90deg,var(--red),#cc0000,transparent);}
+.service-card.c-violet::before{background:linear-gradient(90deg,#8b5cf6,#5533cc,transparent);}
+.service-card.c-pink::before{background:linear-gradient(90deg,#f472b6,#cc3366,transparent);}
+.service-card.c-emerald::before{background:linear-gradient(90deg,#10b981,#047857,transparent);}
+
+.sc-icon{font-size:32px;margin-bottom:14px;display:block;animation:float 3s ease infinite;}
+.sc-category{font-family:'IBM Plex Mono';font-size:7px;letter-spacing:3px;margin-bottom:8px;}
+.sc-name{font-family:'Bebas Neue';font-size:22px;line-height:1;margin-bottom:8px;color:#fff;}
+.sc-desc{font-size:12.5px;color:var(--dim);line-height:1.75;margin-bottom:16px;}
+.sc-items{margin-bottom:16px;}
+.sc-item{font-size:11.5px;color:var(--snow);padding:3px 0;border-bottom:1px solid rgba(201,162,39,.04);
+  display:flex;justify-content:space-between;align-items:center;}
+.sc-item:last-child{border:none;}
+.sc-item-price{font-family:'IBM Plex Mono';font-size:9px;color:var(--neon);font-weight:700;}
+.sc-price-main{font-family:'Bebas Neue';font-size:28px;color:var(--neon);line-height:1;margin-bottom:4px;}
+.sc-price-note{font-family:'IBM Plex Mono';font-size:7.5px;color:var(--dim);}
+.sc-badge{
+  display:inline-block;font-family:'IBM Plex Mono';font-size:7px;letter-spacing:1px;
+  padding:3px 8px;background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.2);
+  color:var(--gold);margin-bottom:8px;
+}
+.sc-badge.hot{background:rgba(255,59,59,.1);border-color:rgba(255,59,59,.2);color:var(--red);}
+.sc-badge.new{background:rgba(0,207,255,.08);border-color:rgba(0,207,255,.2);color:var(--ice);}
+
+/* ══ WHY US / DIFERENCIAL ══ */
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.diff-col{}
+.diff-title{font-family:'Bebas Neue';font-size:18px;margin-bottom:16px;}
+.diff-item{
+  display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(201,162,39,.05);
+}
+.diff-item:last-child{border:none;}
+.diff-icon{font-size:18px;flex-shrink:0;margin-top:2px;}
+.diff-text{font-size:12.5px;color:var(--dim);line-height:1.75;}
+.diff-text strong{color:var(--snow);display:block;margin-bottom:2px;font-size:13px;}
+
+/* ══ CÓMO FUNCIONA ══ */
+.how-steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);}
+.step{background:var(--bg2);padding:28px 24px;position:relative;}
+.step-n{font-family:'Bebas Neue';font-size:72px;color:rgba(201,162,39,.07);line-height:1;position:absolute;top:16px;right:16px;}
+.step-icon{font-size:26px;margin-bottom:10px;display:block;}
+.step-title{font-family:'Bebas Neue';font-size:18px;color:#fff;margin-bottom:6px;}
+.step-desc{font-size:12px;color:var(--dim);line-height:1.75;}
+
+/* ══ TESTIMONIOS ══ */
+.t-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;}
+.t-card{
+  background:var(--bg2);border:1px solid var(--border);padding:22px;
+  position:relative;overflow:hidden;
+}
+.t-card::before{
+  content:'❝';position:absolute;top:10px;right:14px;
+  font-size:48px;color:rgba(201,162,39,.06);font-family:serif;line-height:1;
+}
+.t-stars{font-size:11px;color:var(--gold);margin-bottom:10px;letter-spacing:2px;}
+.t-text{font-size:13px;color:var(--snow);line-height:1.8;margin-bottom:14px;}
+.t-author{font-family:'IBM Plex Mono';font-size:9px;color:var(--dim);}
+.t-service{font-family:'IBM Plex Mono';font-size:7px;letter-spacing:1px;color:var(--gold);margin-top:3px;}
+
+/* ══ BANCO / SERVICIOS FINANCIEROS ══ */
+.bank-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);}
+.bank-card{background:var(--bg2);padding:32px;overflow:hidden;position:relative;}
+.bank-card:hover{background:var(--bg3);}
+.bank-watermark{
+  position:absolute;top:50%;right:-20px;transform:translateY(-50%);
+  font-size:100px;opacity:.03;font-family:'Bebas Neue';color:var(--gold);
+  pointer-events:none;white-space:nowrap;
+}
+.bank-icon-row{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;}
+.bank-icon{
+  width:38px;height:38px;display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(201,162,39,.15);font-size:18px;background:rgba(201,162,39,.04);
+}
+.bank-name{font-family:'Bebas Neue';font-size:24px;color:#fff;margin-bottom:6px;}
+.bank-desc{font-size:12.5px;color:var(--dim);line-height:1.8;margin-bottom:16px;}
+.bank-features{display:flex;flex-direction:column;gap:6px;margin-bottom:18px;}
+.bank-feat{font-size:12px;color:var(--snow);display:flex;align-items:flex-start;gap:8px;line-height:1.6;}
+.bank-feat::before{content:'✓';color:var(--neon);font-family:'IBM Plex Mono';font-size:10px;flex-shrink:0;margin-top:2px;}
+.bank-price{font-family:'Bebas Neue';font-size:32px;color:var(--neon);}
+.bank-price-note{font-family:'IBM Plex Mono';font-size:8px;color:var(--dim);}
+
+/* ══ CTA SECTION ══ */
+.cta-section{
+  background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:80px 28px;text-align:center;position:relative;overflow:hidden;
+}
+.cta-glow{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:600px;height:300px;border-radius:50%;
+  background:radial-gradient(ellipse,rgba(201,162,39,.07),transparent 70%);
+  pointer-events:none;
+}
+.cta-title{font-family:'Bebas Neue';font-size:clamp(42px,7vw,80px);line-height:.85;margin-bottom:18px;}
+.cta-sub{font-size:15px;color:var(--dim);max-width:500px;margin:0 auto 36px;line-height:1.9;}
+.cta-channels{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:24px;}
+.channel-btn{
+  font-family:'IBM Plex Mono';font-size:9px;letter-spacing:2px;
+  padding:12px 22px;border:1px solid var(--border);color:var(--snow);
+  text-decoration:none;display:flex;align-items:center;gap:8px;transition:.2s;
+}
+.channel-btn:hover{border-color:var(--gold);color:var(--gold);}
+.channel-btn.primary{background:var(--neon);color:#000;border-color:var(--neon);font-weight:700;}
+.channel-btn.primary:hover{background:#00ffaa;}
+.cta-note{font-family:'IBM Plex Mono';font-size:8px;color:var(--dim);letter-spacing:1px;}
+
+/* ══ FOOTER ══ */
+footer{
+  background:var(--bg2);border-top:1px solid var(--border);
+  padding:48px 28px 28px;
+}
+.footer-inner{max-width:1060px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-brand{}
+.footer-logo{font-family:'Bebas Neue';font-size:24px;letter-spacing:5px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px;}
+.footer-tagline{font-size:12.5px;color:var(--dim);line-height:1.75;max-width:260px;}
+.footer-col-title{font-family:'IBM Plex Mono';font-size:8px;letter-spacing:3px;color:rgba(201,162,39,.3);margin-bottom:14px;}
+.footer-link{display:block;font-size:13px;color:var(--dim);text-decoration:none;margin-bottom:7px;transition:.15s;}
+.footer-link:hover{color:var(--gold);}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+  border-top:1px solid rgba(201,162,39,.05);padding-top:20px;
+}
+.footer-copy{font-family:'IBM Plex Mono';font-size:8px;color:rgba(86,88,122,.5);letter-spacing:1px;}
+.footer-credits{font-family:'IBM Plex Mono';font-size:7.5px;color:rgba(86,88,122,.3);}
+
+/* ══ CONTACT WIDGET ══ */
+.contact-widget{
+  position:fixed;bottom:22px;right:22px;z-index:600;
+  display:flex;flex-direction:column;align-items:flex-end;gap:8px;
+}
+.contact-main{
+  width:50px;height:50px;display:flex;align-items:center;justify-content:center;
+  background:var(--neon);font-size:22px;cursor:pointer;
+  animation:pulse-neon 2.5s infinite;transition:.2s;
+  border:none;
+}
+.contact-main:hover{transform:scale(1.08);}
+.contact-options{
+  display:flex;flex-direction:column;gap:6px;
+  transition:.3s;opacity:0;transform:translateY(6px);pointer-events:none;
+}
+.contact-options.open{opacity:1;transform:translateY(0);pointer-events:all;}
+.contact-opt{
+  display:flex;align-items:center;gap:8px;
+  font-family:'IBM Plex Mono';font-size:7.5px;letter-spacing:1px;
+  padding:9px 12px;text-decoration:none;transition:.15s;
+  white-space:nowrap;
+}
+.contact-opt.wa{background:var(--neon);color:#000;font-weight:700;}
+.contact-opt.tg{background:var(--ice);color:#000;font-weight:700;}
+.contact-opt:hover{transform:scale(1.03);}
+
+/* ══ ANNOUNCEMENT BAR ══ */
+.announce{
+  background:var(--gold);padding:8px 22px;text-align:center;
+  font-family:'IBM Plex Mono';font-size:8.5px;letter-spacing:2px;color:#000;font-weight:700;
+}
+.announce a{color:#000;text-decoration:none;border-bottom:1px solid rgba(0,0,0,.3);}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:860px){
+  .diff-grid{grid-template-columns:1fr;}
+  .bank-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:580px){
+  section{padding:70px 18px;}
+  .hero{padding:80px 18px 50px;}
+  .footer-top{grid-template-columns:1fr;}
+  .contact-widget{bottom:16px;right:16px;}
+}
+
+/* ══ CURSOR ══ */
+.cursor-dot{
+  width:6px;height:6px;background:var(--gold);border-radius:50%;
+  position:fixed;pointer-events:none;z-index:9000;
+  transition:transform .15s ease;
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCE -->
+<div class="announce">
+  🛡 SEMANA DE LA PRIVACIDAD DIGITAL · Consulta inicial gratis esta semana →
+  <a href="https://wa.me/15722081823" target="_blank" rel="noopener">Escribir ahora</a>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand">
+    <div class="nav-shield">🛡</div>
+    <div>
+      <div class="nav-name">LEGIÓN DIGITAL</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#servicios" class="nav-link">SERVICIOS</a>
+    <a href="#banca" class="nav-link">BANCA</a>
+    <a href="#privacidad" class="nav-link">PRIVACIDAD</a>
+    <a href="#contacto" class="nav-link">CONTACTO</a>
+  </div>
+  <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="nav-cta">CONSULTA GRATIS →</a>
+  <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="nav-mobile-cta">CONTACTO</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span>PRIVACIDAD · CONEXIÓN · LIBERTAD DIGITAL</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="l1">LIBERTAD</span>
+      <span class="l2">DIGITAL</span>
+      <span class="l3">PARA CUBANOS EN LA ISLA Y LA DIÁSPORA</span>
+    </h1>
+    <p class="hero-sub">
+      VPN · Números virtuales · <strong>Cuentas bancarias internacionales</strong> · Recargas Cuba · Privacidad digital.<br>
+      Todo lo que necesitas para moverte en el mundo digital. <strong>Desde $3 USD.</strong>
+    </p>
+    <div class="hero-pills">
+      <div class="hero-pill active">✓ PRIMERA CONSULTA GRATIS</div>
+      <div class="hero-pill">🔐 PRIVACIDAD TOTAL</div>
+      <div class="hero-pill">🏦 BANCA INTERNACIONAL</div>
+      <div class="hero-pill">🌎 DIASPORA + ISLA</div>
+      <div class="hero-pill">⚡ RESPUESTA EN 24H</div>
+    </div>
+    <div class="hero-btns">
+      <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="btn-primary">ESCRIBIR AHORA → GRATIS</a>
+      <a href="#servicios" class="btn-secondary">VER SERVICIOS</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    SCROLL
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item">VPN CONFIGURADA</div>
+    <div class="marquee-item">NÚMEROS VIRTUALES USA/ESPAÑA/MÉXICO</div>
+    <div class="marquee-item">CUENTAS BANCARIAS INTERNACIONALES</div>
+    <div class="marquee-item">RECARGAS NAUTA + CUBACEL</div>
+    <div class="marquee-item">PRIVACIDAD DIGITAL</div>
+    <div class="marquee-item">CUENTAS FREELANCE</div>
+    <div class="marquee-item">GIFT CARDS</div>
+    <div class="marquee-item">STREAMING</div>
+    <div class="marquee-item">SIGNAL · CIFRADO · SEGURIDAD</div>
+    <div class="marquee-item">PRIMERA CONSULTA GRATIS</div>
+    <!-- Repeat for seamless loop -->
+    <div class="marquee-item">VPN CONFIGURADA</div>
+    <div class="marquee-item">NÚMEROS VIRTUALES USA/ESPAÑA/MÉXICO</div>
+    <div class="marquee-item">CUENTAS BANCARIAS INTERNACIONALES</div>
+    <div class="marquee-item">RECARGAS NAUTA + CUBACEL</div>
+    <div class="marquee-item">PRIVACIDAD DIGITAL</div>
+    <div class="marquee-item">CUENTAS FREELANCE</div>
+    <div class="marquee-item">GIFT CARDS</div>
+    <div class="marquee-item">STREAMING</div>
+    <div class="marquee-item">SIGNAL · CIFRADO · SEGURIDAD</div>
+    <div class="marquee-item">PRIMERA CONSULTA GRATIS</div>
+  </div>
+</div>
+
+<!-- STATS -->
+<section id="nosotros" style="padding:60px 28px 0;">
+  <div class="section-inner">
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-num gold">$3</div>
+        <div class="stat-lbl">PRECIO MÍNIMO DE ENTRADA</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" style="color:var(--neon);">24h</div>
+        <div class="stat-lbl">TIEMPO DE ENTREGA MÁXIMO</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" style="color:var(--ice);">8+</div>
+        <div class="stat-lbl">TIPOS DE SERVICIOS ACTIVOS</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" style="color:var(--amber);">3M+</div>
+        <div class="stat-lbl">CUBANOS EN LA DIÁSPORA</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" style="color:#fff;">100%</div>
+        <div class="stat-lbl">SOPORTE PERSONALIZADO</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS PRINCIPALES -->
+<section id="servicios">
+  <div class="section-inner">
+    <div class="section-eyebrow">CATÁLOGO COMPLETO</div>
+    <h2 class="section-title">
+      <span style="color:#fff;">TODOS</span><br>
+      <span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">LOS SERVICIOS</span>
+    </h2>
+    <p class="section-sub" style="margin-bottom:48px;">Desde configuración básica hasta soluciones financieras completas. Cada servicio incluye soporte directo por WhatsApp.</p>
+
+    <div class="services-grid">
+
+      <!-- VPN -->
+      <div class="service-card c-gold">
+        <span class="sc-icon">🔒</span>
+        <div class="sc-badge hot">MÁS SOLICITADO</div>
+        <div class="sc-category" style="color:var(--gold);">PRIVACIDAD · ACCESO</div>
+        <div class="sc-name">VPN CONFIGURADA</div>
+        <div class="sc-desc">Configuración completa de VPN para tu dispositivo. Acceso a cualquier contenido bloqueado geográficamente. Conexión cifrada desde cualquier lugar.</div>
+        <div class="sc-items">
+          <div class="sc-item">Configuración completa + activación <span class="sc-item-price">$15 USD</span></div>
+          <div class="sc-item">Config + 1 mes de servicio <span class="sc-item-price">$18 USD</span></div>
+          <div class="sc-item">Soporte post-instalación incluido <span class="sc-item-price">GRATIS</span></div>
+        </div>
+        <div class="sc-price-note f-mono">iOS · Android · Windows · Mac</div>
+      </div>
+
+      <!-- NÚMEROS VIRTUALES -->
+      <div class="service-card c-neon">
+        <span class="sc-icon">📱</span>
+        <div class="sc-badge new">NUEVO · COLOMBIA DISPONIBLE</div>
+        <div class="sc-category" style="color:var(--neon);">IDENTIDAD DIGITAL</div>
+        <div class="sc-name">NÚMERO VIRTUAL</div>
+        <div class="sc-desc">Número de teléfono real de USA, España, México o Colombia. Para WhatsApp, verificaciones, Telegram y cualquier plataforma que lo requiera.</div>
+        <div class="sc-items">
+          <div class="sc-item">Número USA <span class="sc-item-price">$3 USD</span></div>
+          <div class="sc-item">Número España <span class="sc-item-price">$3 USD</span></div>
+          <div class="sc-item">Número México <span class="sc-item-price">$3 USD</span></div>
+          <div class="sc-item">Número Colombia <span class="sc-item-price">$3 USD</span></div>
+        </div>
+        <div class="sc-price-main">$3</div>
+        <div class="sc-price-note f-mono">POR NÚMERO · ENTREGA INMEDIATA</div>
+      </div>
+
+      <!-- PRIVACIDAD DIGITAL -->
+      <div class="service-card c-ice">
+        <span class="sc-icon">🛡</span>
+        <div class="sc-badge">RECOMENDADO</div>
+        <div class="sc-category" style="color:var(--ice);">SEGURIDAD · PROTECCIÓN</div>
+        <div class="sc-name">PRIVACIDAD DIGITAL</div>
+        <div class="sc-desc">Configuración completa de privacidad para tu dispositivo. Cifrado, contraseñas seguras, permisos de apps, protocolo de emergencia y backup cifrado.</div>
+        <div class="sc-items">
+          <div class="sc-item">Configuración completa del dispositivo <span class="sc-item-price">$20 USD</span></div>
+          <div class="sc-item">Protocolo de emergencia / backup <span class="sc-item-price">$15 USD</span></div>
+          <div class="sc-item">Paquete completo privacidad <span class="sc-item-price">$35 USD</span></div>
+        </div>
+        <div class="sc-price-note f-mono" style="color:var(--dim);">VALOR PAQUETE: $65 USD · PRECIO LEGIÓN: $35</div>
+      </div>
+
+      <!-- RECARGAS -->
+      <div class="service-card c-amber">
+        <span class="sc-icon">📡</span>
+        <div class="sc-badge hot">OFERTA ACTIVA</div>
+        <div class="sc-category" style="color:var(--amber);">TELECOMUNICACIONES · CUBA</div>
+        <div class="sc-name">RECARGAS CUBA</div>
+        <div class="sc-desc">Recarga el móvil de tu familia en Cuba desde donde estés. Cubacel y Nauta. Datos, llamadas y acceso a internet para los tuyos en la isla.</div>
+        <div class="sc-items">
+          <div class="sc-item">600 CUP + 25GB + Ilimitados 12AM–7AM <span class="sc-item-price">$25.99 USDT</span></div>
+          <div class="sc-item">Validez: 35 días <span class="sc-item-price">CUBACEL</span></div>
+          <div class="sc-item">Recarga Nauta (internet cuba) <span class="sc-item-price">CONSULTAR</span></div>
+        </div>
+        <div class="sc-price-note f-mono">TRANSFERENCIA INMEDIATA · CONFIRMACIÓN EN MINUTOS</div>
+      </div>
+
+      <!-- STREAMING -->
+      <div class="service-card c-violet">
+        <span class="sc-icon">🎬</span>
+        <div class="sc-badge">POPULAR EN DIASPORA</div>
+        <div class="sc-category" style="color:#8b5cf6;">ENTRETENIMIENTO · ACCESO</div>
+        <div class="sc-name">CUENTAS STREAMING</div>
+        <div class="sc-desc">Acceso a las principales plataformas de streaming. Netflix, Disney+, Spotify y más. Cuentas individuales o compartidas según necesidad.</div>
+        <div class="sc-items">
+          <div class="sc-item">Netflix (acceso individual) <span class="sc-item-price">CONSULTAR</span></div>
+          <div class="sc-item">Disney+ <span class="sc-item-price">CONSULTAR</span></div>
+          <div class="sc-item">Spotify Premium <span class="sc-item-price">CONSULTAR</span></div>
+        </div>
+        <div class="sc-price-note f-mono">PRECIOS SEGÚN PLAN Y DISPONIBILIDAD</div>
+      </div>
+
+      <!-- GIFT CARDS -->
+      <div class="service-card c-pink">
+        <span class="sc-icon">🎁</span>
+        <div class="sc-badge">ENVÍO DIGITAL</div>
+        <div class="sc-category" style="color:#f472b6;">GIFT CARDS · DIGITAL</div>
+        <div class="sc-name">GIFT CARDS USA</div>
+        <div class="sc-desc">Tarjetas de regalo de las principales tiendas y plataformas de USA. Amazon, Google Play, iTunes, Steam, Xbox y más. Entrega de código inmediata.</div>
+        <div class="sc-items">
+          <div class="sc-item">Amazon Gift Card <span class="sc-item-price">CONSULTAR</span></div>
+          <div class="sc-item">Google Play <span class="sc-item-price">CONSULTAR</span></div>
+          <div class="sc-item">iTunes / App Store <span class="sc-item-price">CONSULTAR</span></div>
+          <div class="sc-item">Steam · Xbox · PlayStation <span class="sc-item-price">CONSULTAR</span></div>
+        </div>
+        <div class="sc-price-note f-mono">CÓDIGO DIGITAL · ENTREGA INMEDIATA</div>
+      </div>
+
+      <!-- FREELANCE SETUP -->
+      <div class="service-card c-emerald">
+        <span class="sc-icon">💼</span>
+        <div class="sc-badge new">NUEVO SERVICIO</div>
+        <div class="sc-category" style="color:#10b981;">TRABAJO DIGITAL · FREELANCE</div>
+        <div class="sc-name">SETUP FREELANCE</div>
+        <div class="sc-desc">Configuración completa para trabajar como freelancer desde cualquier lugar. Cuentas en plataformas internacionales, métodos de cobro y configuración de perfil.</div>
+        <div class="sc-items">
+          <div class="sc-item">Cuenta Upwork/Fiverr configurada <span class="sc-item-price">$25 USD</span></div>
+          <div class="sc-item">Método de cobro internacional <span class="sc-item-price">INCLUIDO</span></div>
+          <div class="sc-item">Guía de primeros clientes <span class="sc-item-price">INCLUIDO</span></div>
+        </div>
+        <div class="sc-price-note f-mono">TODO LO QUE NECESITAS PARA EMPEZAR</div>
+      </div>
+
+      <!-- CONSULTORÍA -->
+      <div class="service-card c-gold">
+        <span class="sc-icon">💬</span>
+        <div class="sc-badge" style="background:var(--neon2);border-color:rgba(0,232,122,.2);color:var(--neon);">GRATIS</div>
+        <div class="sc-category" style="color:var(--gold);">CONSULTORÍA · ASESORÍA</div>
+        <div class="sc-name">PRIMERA CONSULTA</div>
+        <div class="sc-desc">No sabemos qué necesitas hasta que nos lo cuentes. La primera conversación es completamente gratis. Sin compromiso, sin presión, solo soluciones.</div>
+        <div class="sc-items">
+          <div class="sc-item">Consulta inicial 30 min <span class="sc-item-price" style="color:var(--neon);">GRATIS</span></div>
+          <div class="sc-item">Diagnóstico de necesidades <span class="sc-item-price" style="color:var(--neon);">GRATIS</span></div>
+          <div class="sc-item">Recomendación personalizada <span class="sc-item-price" style="color:var(--neon);">GRATIS</span></div>
+        </div>
+        <div class="sc-price-main" style="color:var(--neon);">$0</div>
+        <div class="sc-price-note f-mono" style="color:var(--neon);">SIEMPRE. SIN EXCEPCIÓN.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS BANCARIOS -->
+<section id="banca" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-eyebrow">SERVICIOS FINANCIEROS INTERNACIONALES</div>
+    <h2 class="section-title">
+      <span style="color:#fff;">BANCA</span><br>
+      <span style="background:linear-gradient(135deg,var(--neon),#00a050);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">INTERNACIONAL</span>
+    </h2>
+    <p class="section-sub" style="margin-bottom:48px;">
+      La barrera bancaria es el obstáculo número uno para los cubanos en la diáspora y en la isla. Legión Digital configura acceso a servicios financieros internacionales reales — sin SSN obligatorio, sin residencia necesaria.
+    </p>
+
+    <div class="bank-grid">
+
+      <div class="bank-card">
+        <div class="bank-watermark">WISE</div>
+        <div class="bank-icon-row">
+          <div class="bank-icon">🏦</div>
+          <div class="bank-icon">💳</div>
+          <div class="bank-icon">🌍</div>
+        </div>
+        <div class="sc-badge new">ACCESO INTERNACIONAL</div>
+        <div class="bank-name">WISE / CUENTA MULTIDIVISA</div>
+        <div class="bank-desc">Cuenta bancaria real en USD, EUR, GBP y más de 50 divisas. Tarjeta de débito internacional. Envíos de dinero a bajo costo. Sin necesidad de SSN para muchas opciones.</div>
+        <div class="bank-features">
+          <div class="bank-feat">Cuenta en USD, EUR, GBP y 50+ divisas</div>
+          <div class="bank-feat">Tarjeta de débito Visa/Mastercard internacional</div>
+          <div class="bank-feat">Recibir pagos de plataformas freelance (Upwork, Fiverr, Stripe)</div>
+          <div class="bank-feat">Transferencias internacionales a bajo costo</div>
+          <div class="bank-feat">App móvil disponible en todo el mundo</div>
+          <div class="bank-feat">Verificación de identidad asistida por Legión Digital</div>
+        </div>
+        <div class="bank-price">$30 USD</div>
+        <div class="bank-price-note f-mono">SETUP COMPLETO · VERIFICACIÓN INCLUIDA · SOPORTE TOTAL</div>
+      </div>
+
+      <div class="bank-card">
+        <div class="bank-watermark">PAYONEER</div>
+        <div class="bank-icon-row">
+          <div class="bank-icon">💰</div>
+          <div class="bank-icon">📲</div>
+          <div class="bank-icon">🇺🇸</div>
+        </div>
+        <div class="sc-badge hot">POPULAR FREELANCERS</div>
+        <div class="bank-name">PAYONEER INTERNACIONAL</div>
+        <div class="bank-desc">La cuenta favorita de freelancers y trabajadores remotos de todo el mundo. Acepta pagos de Amazon, Google, Airbnb, Upwork, Fiverr y cientos de plataformas internacionales.</div>
+        <div class="bank-features">
+          <div class="bank-feat">Cuenta bancaria USA real (ABA/Routing)</div>
+          <div class="bank-feat">Cuenta EU, UK, Japón, Australia disponibles</div>
+          <div class="bank-feat">Compatible con Amazon Seller, Google AdSense, Airbnb</div>
+          <div class="bank-feat">Tarjeta de débito Mastercard internacional</div>
+          <div class="bank-feat">Retiros en cajero en más de 200 países</div>
+          <div class="bank-feat">Proceso de verificación guiado paso a paso</div>
+        </div>
+        <div class="bank-price">$30 USD</div>
+        <div class="bank-price-note f-mono">SETUP COMPLETO · ACOMPAÑAMIENTO EN VERIFICACIÓN</div>
+      </div>
+
+      <div class="bank-card">
+        <div class="bank-watermark">BINANCE</div>
+        <div class="bank-icon-row">
+          <div class="bank-icon">₿</div>
+          <div class="bank-icon">🔐</div>
+          <div class="bank-icon">⚡</div>
+        </div>
+        <div class="sc-badge new">FINANZAS PRIVADAS</div>
+        <div class="bank-name">CUENTA CRIPTO / BINANCE</div>
+        <div class="bank-desc">Setup completo de cuenta en Binance u otras exchanges. Compra, venta y custodia de criptomonedas. Bitcoin, USDT y otras monedas digitales para preservar y mover capital.</div>
+        <div class="bank-features">
+          <div class="bank-feat">Cuenta Binance o exchange alternativo configurada y verificada</div>
+          <div class="bank-feat">Wallet de custodia propia (cold wallet) para máxima seguridad</div>
+          <div class="bank-feat">Guía de compra/venta de USDT (stablecoin dólar)</div>
+          <div class="bank-feat">Método de carga/descarga de fondos para tu país</div>
+          <div class="bank-feat">Medidas de seguridad y 2FA configurados</div>
+          <div class="bank-feat">Bitcoin como reserva de valor y privacidad patrimonial</div>
+        </div>
+        <div class="bank-price">$25 USD</div>
+        <div class="bank-price-note f-mono">CRYPTO SETUP · SEGURIDAD INCLUIDA</div>
+      </div>
+
+      <div class="bank-card">
+        <div class="bank-watermark">ZELLE</div>
+        <div class="bank-icon-row">
+          <div class="bank-icon">🇺🇸</div>
+          <div class="bank-icon">💸</div>
+          <div class="bank-icon">🏦</div>
+        </div>
+        <div class="sc-badge">DIASPORA USA</div>
+        <div class="bank-name">BANCA USA SIN SSN</div>
+        <div class="bank-desc">Acceso a cuentas bancarias en EE.UU. que no requieren Social Security Number. Opciones para la diáspora cubana recién llegada o con documentación limitada.</div>
+        <div class="bank-features">
+          <div class="bank-feat">Chime, Current u otras opciones sin SSN requerido</div>
+          <div class="bank-feat">Cuenta con número de routing y cuenta para recibir pagos</div>
+          <div class="bank-feat">Acceso a Zelle para transferencias dentro de USA</div>
+          <div class="bank-feat">Tarjeta de débito Visa para compras online y presencial</div>
+          <div class="bank-feat">Proceso guiado con tu ITIN o pasaporte</div>
+          <div class="bank-feat">Sin historial crediticio necesario para empezar</div>
+        </div>
+        <div class="bank-price">$20 USD</div>
+        <div class="bank-price-note f-mono">SETUP + ACOMPAÑAMIENTO · SOLO USA</div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:20px;padding:20px 24px;background:rgba(201,162,39,.04);border:1px solid rgba(201,162,39,.12);">
+      <div style="font-family:'IBM Plex Mono';font-size:8px;letter-spacing:3px;color:rgba(201,162,39,.4);margin-bottom:8px;">PAQUETE FINANCIERO COMPLETO</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
+        <div>
+          <div style="font-family:'Bebas Neue';font-size:22px;color:#fff;margin-bottom:4px;">PAQUETE BANCA INTERNACIONAL + CRIPTO</div>
+          <div style="font-size:12.5px;color:var(--dim);max-width:500px;line-height:1.7;">Wise + Payoneer + Binance configurados juntos. La infraestructura financiera completa para un cubano en la diáspora o trabajando remotamente. Soporte extendido 30 días.</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0;">
+          <div style="font-family:'IBM Plex Mono';font-size:9px;color:var(--dim);text-decoration:line-through;">Valor individual: $85 USD</div>
+          <div style="font-family:'Bebas Neue';font-size:40px;color:var(--neon);line-height:1;">$60 USD</div>
+          <div style="font-family:'IBM Plex Mono';font-size:8px;color:var(--neon);">AHORRO: $25 USD</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRIVACIDAD SECTION -->
+<section id="privacidad">
+  <div class="section-inner">
+    <div class="section-eyebrow">SEGURIDAD · PROTECCIÓN · CONTROL</div>
+    <h2 class="section-title">
+      <span style="color:#fff;">TU TELÉFONO</span><br>
+      <span style="background:linear-gradient(135deg,var(--ice),#0088cc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">TU FORTALEZA</span>
+    </h2>
+    <p class="section-sub" style="margin-bottom:48px;">Sin cifrado, sin contraseña fuerte, sin configuración correcta — tu teléfono es una puerta abierta. Cellebrite, la herramienta forense más usada, accede a un teléfono desprotegido en 4 minutos.</p>
+
+    <div class="diff-grid">
+      <div class="diff-col">
+        <div class="diff-title" style="color:var(--red);">⚠ SIN PROTECCIÓN — ESTÁS EXPUESTO</div>
+        <div class="diff-item">
+          <div class="diff-icon">📍</div>
+          <div class="diff-text">
+            <strong>Ubicación GPS registrada cada 3 segundos</strong>
+            Cualquier app con permiso de ubicación sabe dónde estás en tiempo real. Historial de 30+ días disponible.
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">💬</div>
+          <div class="diff-text">
+            <strong>Mensajes "borrados" recuperables</strong>
+            Cellebrite y herramientas forenses similares recuperan mensajes eliminados. El borrado convencional no es suficiente.
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">🔓</div>
+          <div class="diff-text">
+            <strong>Huella digital: se puede forzar físicamente</strong>
+            La biometría no protege en situaciones de presión. Una contraseña alfanumérica fuerte no puede ser forzada.
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">📷</div>
+          <div class="diff-text">
+            <strong>Fotos y documentos expuestos sin cifrado</strong>
+            Sin cifrado de disco, el contenido del teléfono es accesible aunque esté bloqueado con huella o PIN.
+          </div>
+        </div>
+      </div>
+      <div class="diff-col">
+        <div class="diff-title" style="color:var(--neon);">✓ CON LEGIÓN DIGITAL — BAJO TU CONTROL</div>
+        <div class="diff-item">
+          <div class="diff-icon">🔐</div>
+          <div class="diff-text">
+            <strong>Cifrado completo de disco activado</strong>
+            Todo el contenido del teléfono cifrado. Sin tu contraseña, nadie accede — ni con herramientas forenses.
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">🛡</div>
+          <div class="diff-text">
+            <strong>Contraseña alfanumérica de 12+ caracteres</strong>
+            La primera y más importante capa de seguridad. Configurada correctamente en 10 minutos.
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">📵</div>
+          <div class="diff-text">
+            <strong>Permisos de apps auditados y corregidos</strong>
+            Revisamos qué apps tienen acceso a tu cámara, micrófono, ubicación y contactos. Revocamos lo innecesario.
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">🗂</div>
+          <div class="diff-text">
+            <strong>Protocolo de emergencia configurado</strong>
+            Si te quitan el teléfono, sabes exactamente qué hacer en los primeros 10 minutos para proteger todo.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-eyebrow">PROCESO</div>
+    <h2 class="section-title">
+      <span style="color:#fff;">ASÍ DE</span><br>
+      <span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">SENCILLO</span>
+    </h2>
+    <p class="section-sub" style="margin-bottom:48px;">Sin tecnicismos. Sin esperas. Sin complicaciones. Todo el proceso ocurre por WhatsApp o Telegram.</p>
+    <div class="how-steps">
+      <div class="step">
+        <div class="step-n">01</div>
+        <span class="step-icon">💬</span>
+        <div class="step-title">ESCRIBENOS</div>
+        <div class="step-desc">Manda un mensaje por WhatsApp o Telegram. Cuéntanos qué necesitas. La primera consulta es gratis, sin compromisos.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">02</div>
+        <span class="step-icon">🎯</span>
+        <div class="step-title">DIAGNÓSTICO</div>
+        <div class="step-desc">Te hacemos las preguntas correctas para entender exactamente qué solución necesitas tú, no una solución genérica.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <span class="step-icon">⚡</span>
+        <div class="step-title">CONFIGURAMOS</div>
+        <div class="step-desc">Ejecutamos el servicio de forma remota o con guía paso a paso. Tiempo de entrega: menos de 24 horas en la mayoría de servicios.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">04</div>
+        <span class="step-icon">✅</span>
+        <div class="step-title">SOPORTE</div>
+        <div class="step-desc">No te dejamos solo. Después de entregar el servicio, seguimos disponibles para cualquier duda o ajuste que necesites.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section>
+  <div class="section-inner">
+    <div class="section-eyebrow">COMUNIDAD · CLIENTES</div>
+    <h2 class="section-title">
+      <span style="color:#fff;">LO QUE DICEN</span><br>
+      <span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">LOS NUESTROS</span>
+    </h2>
+    <p class="section-sub" style="margin-bottom:40px;">Cubanos en la diáspora y en la isla que ya tienen sus servicios configurados y funcionando.</p>
+    <div class="t-grid">
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-text">"Me configuraron el número de USA en menos de una hora. Ahora puedo verificar todas las apps que necesitaba. Increíble el servicio."</div>
+        <div class="t-author">— Y.M. · Miami, FL</div>
+        <div class="t-service">NÚMERO VIRTUAL USA</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-text">"Llevaba meses intentando abrir una cuenta en Wise sin lograrlo solo. Con Legión Digital lo tuve resuelto en un día. Para el cubano que no sabe cómo hacerlo, estos son los que ayudan."</div>
+        <div class="t-author">— R.P. · España</div>
+        <div class="t-service">CUENTA WISE INTERNACIONAL</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-text">"La VPN que me configuraron funciona perfecto. Accedo a todo sin problemas desde Cuba. El equipo responde rápido y explica todo bien."</div>
+        <div class="t-author">— L.F. · La Habana</div>
+        <div class="t-service">VPN CONFIGURADA</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-text">"Me hicieron el setup completo de privacidad en el teléfono. Nunca había entendido para qué servía el cifrado hasta que me lo explicaron. Ahora me siento mucho más tranquila."</div>
+        <div class="t-author">— C.G. · Canadá</div>
+        <div class="t-service">CONFIGURACIÓN PRIVACIDAD</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-text">"Me ayudaron con Payoneer para cobrar mis proyectos de freelance. Ahora recibo pagos de clientes en USA directamente. No imaginaba que fuera tan posible desde mi situación."</div>
+        <div class="t-author">— A.M. · Ciudad de México</div>
+        <div class="t-service">SETUP FREELANCE + PAYONEER</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-text">"La recarga llegó a Cuba en menos de 10 minutos. Mi familia pudo comunicarse ese mismo día. El precio es bueno y la atención es excelente."</div>
+        <div class="t-author">— O.R. · New York</div>
+        <div class="t-service">RECARGA CUBACEL</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="cta-section" id="contacto">
+  <div class="cta-glow"></div>
+  <div class="cta-title" style="position:relative;">
+    <span style="color:#fff;">EMPIEZA</span><br>
+    <span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">HOY</span>
+  </div>
+  <p class="cta-sub" style="position:relative;">La primera consulta es gratis. Sin compromiso. Solo cuéntanos qué necesitas y te decimos exactamente cómo ayudarte.</p>
+  <div class="cta-channels" style="position:relative;">
+    <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="channel-btn primary">📲 WHATSAPP · RESPUESTA INMEDIATA</a>
+    <a href="https://t.me/legioneternity" target="_blank" rel="noopener" class="channel-btn">✈️ TELEGRAM · @legioneternity</a>
+    <a href="https://t.me/Legi0n_St0re" target="_blank" rel="noopener" class="channel-btn">📢 CANAL TELEGRAM</a>
+    <a href="https://chat.whatsapp.com/GS2hApWBAsMEJRT7nREY2z" target="_blank" rel="noopener" class="channel-btn">👥 COMUNIDAD WHATSAPP</a>
+  </div>
+  <div class="cta-note" style="position:relative;">+1 (572) 208-1823 · DISPONIBLE 7 DÍAS · RESPUESTA EN MENOS DE 2 HORAS</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">LEGIÓN DIGITAL</div>
+        <p class="footer-tagline">Servicios digitales para cubanos en la isla y la diáspora. Privacidad, conexión y libertad digital desde $3 USD.</p>
+        <br>
+        <p style="font-family:'IBM Plex Mono';font-size:8px;color:rgba(86,88,122,.4);letter-spacing:1px;margin-top:10px;">
+          "La privacidad no es secretismo.<br>Es el derecho de decidir qué compartes<br>y con quién."
+        </p>
+      </div>
+      <div>
+        <div class="footer-col-title">SERVICIOS</div>
+        <a href="#servicios" class="footer-link">VPN Configurada</a>
+        <a href="#servicios" class="footer-link">Números Virtuales</a>
+        <a href="#servicios" class="footer-link">Privacidad Digital</a>
+        <a href="#servicios" class="footer-link">Recargas Cuba</a>
+        <a href="#servicios" class="footer-link">Streaming</a>
+        <a href="#servicios" class="footer-link">Gift Cards</a>
+      </div>
+      <div>
+        <div class="footer-col-title">BANCA</div>
+        <a href="#banca" class="footer-link">Wise Internacional</a>
+        <a href="#banca" class="footer-link">Payoneer</a>
+        <a href="#banca" class="footer-link">Cripto / Binance</a>
+        <a href="#banca" class="footer-link">Banca USA sin SSN</a>
+        <a href="#banca" class="footer-link">Paquete Financiero</a>
+        <a href="#servicios" class="footer-link">Setup Freelance</a>
+      </div>
+      <div>
+        <div class="footer-col-title">CONTACTO</div>
+        <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="footer-link">📲 WhatsApp</a>
+        <a href="https://t.me/legioneternity" target="_blank" rel="noopener" class="footer-link">✈️ Telegram</a>
+        <a href="https://t.me/Legi0n_St0re" target="_blank" rel="noopener" class="footer-link">📢 Canal</a>
+        <a href="https://chat.whatsapp.com/GS2hApWBAsMEJRT7nREY2z" target="_blank" rel="noopener" class="footer-link">👥 Comunidad</a>
+        <br>
+        <div style="font-family:'IBM Plex Mono';font-size:8px;color:rgba(86,88,122,.5);margin-top:8px;line-height:1.8;">
+          +1 (572) 208-1823<br>
+          @legioneternity
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 LEGIÓN DIGITAL · TODOS LOS DERECHOS RESERVADOS</div>
+      <div class="footer-credits">legion-digital-global.github.io</div>
+    </div>
+  </div>
+</footer>
+
+<!-- CONTACT WIDGET -->
+<div class="contact-widget">
+  <div class="contact-options" id="co">
+    <a href="https://wa.me/15722081823" target="_blank" rel="noopener" class="contact-opt wa">📲 WhatsApp · Respuesta inmediata</a>
+    <a href="https://t.me/legioneternity" target="_blank" rel="noopener" class="contact-opt tg">✈️ Telegram · @legioneternity</a>
+  </div>
+  <button class="contact-main" id="ctoggle" onclick="toggleContact()" title="Contactar ahora">💬</button>
+</div>
+
+<script>
+function toggleContact(){
+  const c=document.getElementById('co');
+  const open=c.classList.toggle('open');
+  document.getElementById('ctoggle').textContent=open?'✕':'💬';
+}
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href').slice(1);
+    const el=document.getElementById(id);
+    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}
+  });
+});
+</script>
+</body>
+</html>
